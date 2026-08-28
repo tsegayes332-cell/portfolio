@@ -23,7 +23,7 @@ const Contact = () => {
   };
 
   return (
-    <section id="contact" className="py-20 bg-dark-light">
+    <section id="contact" className="py-20 bg-dark">
       <div className="container mx-auto px-6">
         <div className="max-w-4xl mx-auto">
           <h2 className="text-4xl font-bold text-center mb-16 gradient-text">
@@ -81,7 +81,7 @@ const Contact = () => {
               </div>
               
               <div className="mt-8">
-                <h4 className="font-medium text-gray-800 mb-4">Follow Me</h4>
+                <h4 className="font-medium text-text-primary mb-4">Follow Me</h4>
                 <div className="flex space-x-4">
                   <a
                     href="https://github.com"
@@ -130,7 +130,7 @@ const Contact = () => {
                     value={formData.name}
                     onChange={handleChange}
                     required
-                    className="w-full px-4 py-3 border border-light-gray rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition-all duration-200 bg-dark text-text-primary"
+                    className="w-full px-4 py-3 border border-light-gray rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition-all duration-200 bg-white text-text-primary"
                     placeholder="Your Name"
                   />
                 </div>
@@ -146,7 +146,7 @@ const Contact = () => {
                     value={formData.email}
                     onChange={handleChange}
                     required
-                    className="w-full px-4 py-3 border border-light-gray rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition-all duration-200 bg-dark text-text-primary"
+                    className="w-full px-4 py-3 border border-light-gray rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition-all duration-200 bg-white text-text-primary"
                     placeholder="tsegayes332@gmail.com"
                   />
                 </div>
@@ -162,14 +162,14 @@ const Contact = () => {
                     onChange={handleChange}
                     required
                     rows="5"
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition-all duration-200 resize-none"
+                    className="w-full px-4 py-3 border border-light-gray rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition-all duration-200 resize-none"
                     placeholder="Your message..."
                   />
                 </div>
                 
                 <button
                   type="submit"
-                  className="w-full px-8 py-3 bg-primary text-dark rounded-lg hover:bg-primary-light transition-colors duration-200 font-medium"
+                  className="w-full px-8 py-3 bg-primary text-white rounded-lg hover:bg-primary-light transition-colors duration-200 font-medium shadow-soft"
                 >
                   Send Message
                 </button>

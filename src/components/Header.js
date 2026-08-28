@@ -42,14 +42,14 @@ const Header = () => {
     <header
       className={`fixed top-0 w-full z-50 transition-all duration-500 ${
         isScrolled
-          ? 'bg-dark/95 backdrop-blur-md shadow-soft py-3 border-b border-light-gray'
+          ? 'bg-white/90 backdrop-blur-md shadow-soft py-3 border-b border-light-gray'
           : 'bg-transparent py-5'
       }`}
     >
       <nav className="container-custom flex justify-between items-center">
         {/* Logo */}
         <a href="#home" className="font-heading text-2xl font-bold text-text-primary hover:text-primary transition-colors duration-300">
-          Selamawit<span className="text-secondary">.</span>
+          Selamawit<span className="text-primary">.</span>
         </a>
 
         {/* Desktop Navigation */}
@@ -62,13 +62,13 @@ const Header = () => {
                 href={item.href}
                 className={`relative px-4 py-2 text-sm font-medium transition-all duration-300 rounded-lg ${
                   isActive 
-                    ? 'text-primary bg-primary/5' 
+                    ? 'text-primary bg-primary/10' 
                     : 'text-text-secondary hover:text-primary hover:bg-primary/5'
                 }`}
               >
                 {item.name}
                 {isActive && (
-                  <span className="absolute bottom-1 left-1/2 transform -translate-x-1/2 w-1 h-1 bg-secondary rounded-full"></span>
+                  <span className="absolute bottom-1 left-1/2 transform -translate-x-1/2 w-1 h-1 bg-primary rounded-full"></span>
                 )}
               </a>
             );
@@ -115,7 +115,7 @@ const Header = () => {
 
         {/* Mobile Navigation */}
         {isMenuOpen && (
-          <div className="lg:hidden absolute top-full left-0 w-full bg-dark/95 backdrop-blur-md shadow-soft border-t border-light-gray animate-fade-in">
+          <div className="lg:hidden absolute top-full left-0 w-full bg-white/95 backdrop-blur-md shadow-soft border-t border-light-gray animate-fade-in">
             <div className="container-custom py-4 space-y-1">
               {navItems.map((item) => {
                 const isActive = activeSection === item.href.replace('#', '');
@@ -125,7 +125,7 @@ const Header = () => {
                     href={item.href}
                     className={`block px-4 py-3 rounded-lg font-medium transition-all duration-300 ${
                       isActive 
-                        ? 'text-primary bg-primary/5' 
+                        ? 'text-primary bg-primary/10' 
                         : 'text-text-secondary hover:text-primary hover:bg-primary/5'
                     }`}
                     onClick={() => setIsMenuOpen(false)}
