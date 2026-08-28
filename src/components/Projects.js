@@ -86,15 +86,15 @@ const Projects = () => {
       description: "Cross-platform mobile app connecting farmers directly with buyers. Features real-time messaging, payment integration, and multi-language support.",
       image: "/images/projects/farmers-marketplace.jpg",
       category: "mobile",
-      technologies: ["React Native", "TypeScript", "Node.js", "Express", "Prisma", "PostgreSQL", "Socket.io", "Redux", "Firebase"],
-      role: "Mobile & Backend Developer",
+      technologies: ["React Native", "TypeScript", "Node.js", "Express", "Prisma", "PostgreSQL", "Socket.io", "Redux", "Chapa", "Firebase"],
+      role: "Full-Stack Developer",
       keyFeatures: [
-        "Real-time messaging between farmers and buyers",
-        "Secure payment integration with Chapa",
-        "Multi-language support (i18n)",
-        "Push notifications and cloud image uploads"
+        "Real-time messaging — Socket.io chat between farmers, buyers, and transporters",
+        "Payment integration — Chapa (Ethiopian fintech) with webhook verification",
+        "Multi-role system — 4 user roles (Farmer, Buyer, Transporter, Admin) with different dashboards",
+        "Trilingual support — English, Amharic, Afaan Oromoo with runtime switching"
       ],
-      contribution: "Built the complete mobile app and backend API — navigation, state management, real-time communication, payment flow, and database design.",
+      contribution: "Built the full-stack marketplace platform including REST API with Express/Prisma, React Native mobile app, real-time chat with Socket.io, payment integration with Chapa, and admin dashboard. Designed and implemented the backend API, database schema (8 models), authentication system, and payment webhook. Built the React Native frontend with Redux state management and real-time messaging.",
       github: "https://github.com/tsegayes332-cell/FarmersMarketplace-",
       featured: true,
     },
