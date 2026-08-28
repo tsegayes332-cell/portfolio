@@ -7,18 +7,18 @@ const Projects = () => {
     {
       id: 1,
       title: "Habesha 251 Events",
-      description: "Event management platform for Ethiopian events — weddings, concerts, festivals. Browse, book, and manage events with cultural design.",
+      description: "Bilingual event management platform for Ethiopian events with ticket purchasing, calendar integration, and admin moderation.",
       image: "/images/projects/habesha-events.jpg",
       category: "fullstack",
-      technologies: ["React", "Node.js", "MongoDB", "Express", "REST API"],
+      technologies: ["React", "Node.js", "MongoDB", "Express", "i18next", "Chapa", "REST API"],
       role: "Full-Stack Developer",
       keyFeatures: [
-        "Event browsing and search with filters",
-        "Booking and ticket management system",
-        "User authentication and profiles",
-        "Responsive cultural-themed design"
+        "Bilingual Support (EN/AM) — full Amharic translations with i18next, custom date formatting, and language toggle",
+        "Ethiopian Calendar Integration — hand-written Gregorian-to-Ethiopian date converter (not a library)",
+        "Ticket Purchasing with Chapa — real payment processing in Ethiopian Birr with row-level locking to prevent overselling",
+        "Admin Moderation Dashboard — event submission, approval/rejection workflow, invite-code protected admin signup"
       ],
-      contribution: "Designed and developed the entire application — frontend UI, backend API, database schema, and deployment.",
+      contribution: "Built the full-stack platform — bilingual frontend with i18n, Ethiopian calendar converter, event CRUD, ticket purchasing with Chapa payment integration, and admin moderation dashboard with approval workflow.",
       github: "https://github.com/tsegayes332-cell/habesha-251-events",
       demo: "https://habesha-events-pied.vercel.app",
       featured: true,
