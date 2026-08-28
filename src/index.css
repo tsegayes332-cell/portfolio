@@ -13,8 +13,8 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: #FFFFFF;
-  color: #111827;
+  background-color: #111827;
+  color: #F9FAFB;
 }
 
 code {
@@ -119,7 +119,7 @@ code {
 
 .card-hover:hover {
   transform: translateY(-6px);
-  box-shadow: 0 20px 40px -12px rgba(37, 99, 235, 0.15);
+  box-shadow: 0 20px 40px -12px rgba(37, 99, 235, 0.2);
 }
 
 /* Smooth Link Underline */
@@ -147,18 +147,18 @@ code {
 .btn-primary {
   @apply px-8 py-3 bg-primary text-white rounded-lg font-medium;
   transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-  box-shadow: 0 2px 8px rgba(37, 99, 235, 0.25);
+  box-shadow: 0 2px 8px rgba(37, 99, 235, 0.3);
 }
 
 .btn-primary:hover {
   transform: translateY(-2px);
-  box-shadow: 0 8px 20px rgba(37, 99, 235, 0.4);
+  box-shadow: 0 8px 20px rgba(37, 99, 235, 0.5);
   background: #1D4ED8;
 }
 
 .btn-primary:active {
   transform: translateY(0);
-  box-shadow: 0 2px 8px rgba(37, 99, 235, 0.25);
+  box-shadow: 0 2px 8px rgba(37, 99, 235, 0.3);
 }
 
 .btn-secondary {
@@ -170,7 +170,7 @@ code {
   transform: translateY(-2px);
   border-color: #2563EB;
   color: #2563EB;
-  box-shadow: 0 4px 12px rgba(37, 99, 235, 0.1);
+  box-shadow: 0 4px 12px rgba(37, 99, 235, 0.15);
 }
 
 /* Section Spacing */
@@ -212,11 +212,11 @@ code {
 }
 
 ::-webkit-scrollbar-track {
-  background: #F8FAFC;
+  background: #111827;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #E5E7EB;
+  background: #374151;
   border-radius: 3px;
   transition: background 0.3s ease;
 }
