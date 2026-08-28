@@ -22,20 +22,9 @@ code {
     monospace;
 }
 
-/* Coffee Gradient Text */
-.gradient-text {
-  background: linear-gradient(135deg, #654321 0%, #8a6544 50%, #c9a227 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-}
-
-/* Gold Accent Gradient */
+/* Accent Text Color */
 .gradient-gold {
-  background: linear-gradient(135deg, #c9a227 0%, #b7863e 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
+  color: #c9a227;
 }
 
 /* Card Hover Effects */
@@ -51,7 +40,6 @@ code {
 /* Button Styles */
 .btn-primary {
   @apply px-8 py-3 bg-primary text-white rounded-lg font-medium transition-all duration-300;
-  background: linear-gradient(135deg, #654321 0%, #8a6544 100%);
 }
 
 .btn-primary:hover {
@@ -64,7 +52,7 @@ code {
 }
 
 .btn-secondary:hover {
-  background: linear-gradient(135deg, #654321 0%, #8a6544 100%);
+  background: #654321;
   border-color: #654321;
   color: #ffffff;
   transform: translateY(-2px);
@@ -80,10 +68,9 @@ code {
   @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
 }
 
-/* Professional Section Title */
+/* Section Title */
 .section-title {
   @apply text-4xl md:text-5xl font-bold text-center mb-4;
-  font-family: 'Playfair Display', serif;
 }
 
 .section-subtitle {
@@ -96,29 +83,6 @@ code {
   height: 4px;
   background: linear-gradient(90deg, #654321, #c9a227);
   border-radius: 2px;
-}
-
-/* Glass Effect */
-.glass {
-  background: rgba(255, 255, 255, 0.7);
-  backdrop-filter: blur(10px);
-  border: 1px solid rgba(101, 67, 33, 0.15);
-}
-
-/* Warm Grid Pattern */
-.grid-pattern {
-  background-image:
-    linear-gradient(rgba(101, 67, 33, 0.05) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(101, 67, 33, 0.05) 1px, transparent 1px);
-  background-size: 48px 48px;
-}
-
-/* Light Grid Pattern (for dark backgrounds) */
-.grid-pattern-light {
-  background-image:
-    linear-gradient(rgba(255, 255, 255, 0.07) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(255, 255, 255, 0.07) 1px, transparent 1px);
-  background-size: 48px 48px;
 }
 
 /* Selection Color */

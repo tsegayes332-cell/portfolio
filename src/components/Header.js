@@ -50,13 +50,16 @@ const Header = () => {
     >
       <nav className="container-custom flex justify-between items-center">
         {/* Logo */}
-        <a
-          href="#home"
-          className={`font-heading text-2xl font-bold transition-colors duration-300 ${
+        <a href="#home" className="flex items-center gap-2.5">
+          <svg className="w-9 h-9" viewBox="0 0 64 64" aria-label="Selamawit Tsegaye">
+            <rect width="64" height="64" rx="14" fill="#654321" />
+            <text x="32" y="43" fontFamily="Poppins, Arial, sans-serif" fontSize="28" fontWeight="700" fill="#ffffff" textAnchor="middle">ST</text>
+          </svg>
+          <span className={`font-heading text-2xl font-bold transition-colors duration-300 ${
             onHero ? 'text-white hover:text-secondary' : 'text-text-primary hover:text-primary'
-          }`}
-        >
-          Selamawit<span className="text-secondary">.</span>
+          }`}>
+            Selamawit<span className="text-secondary">.</span>
+          </span>
         </a>
 
         {/* Desktop Navigation */}

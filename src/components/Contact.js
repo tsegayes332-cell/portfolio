@@ -26,7 +26,7 @@ const Contact = () => {
     <section id="contact" className="py-20 bg-dark">
       <div className="container mx-auto px-6">
         <div className="max-w-4xl mx-auto">
-          <h2 className="text-4xl font-bold text-center mb-16 gradient-text">
+          <h2 className="text-4xl font-bold text-center mb-16 text-primary">
             Get In Touch
           </h2>
           
@@ -84,7 +84,7 @@ const Contact = () => {
                 <h4 className="font-medium text-text-primary mb-4">Follow Me</h4>
                 <div className="flex space-x-4">
                   <a
-                    href="https://github.com"
+                    href="https://github.com/tsegayes332-cell"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="w-10 h-10 bg-dark rounded-full flex items-center justify-center text-text-secondary hover:bg-primary hover:text-dark transition-colors duration-200 border border-light-gray"

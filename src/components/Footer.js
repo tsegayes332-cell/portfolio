@@ -20,7 +20,7 @@ const Footer = () => {
 
             <div className="flex space-x-6">
               <a
-                href="https://github.com"
+                href="https://github.com/tsegayes332-cell"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-white/60 hover:text-white transition-colors duration-200"
@@ -57,7 +57,7 @@ const Footer = () => {
               © {currentYear} Selamawit Tsegaye. All rights reserved.
             </p>
             <p className="text-white/60 mt-2">
-              Built with React, Tailwind CSS, and passion
+              Built with React and Tailwind CSS
             </p>
           </div>
         </div>

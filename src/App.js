@@ -6,16 +6,13 @@ import Experience from './components/Experience';
 import Projects from './components/Projects';
 import Skills from './components/Skills';
 import Education from './components/Education';
-import Testimonials from './components/Testimonials';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
 import ScrollToTop from './components/ScrollToTop';
-import PageLoader from './components/PageLoader';
 
 function App() {
   return (
     <div className="min-h-screen bg-light">
-      <PageLoader />
       <Header />
       <main>
         <Hero />
@@ -24,8 +21,6 @@ function App() {
         <Projects />
         <Skills />
         <Education />
-        <Testimonials />
-
         <Contact />
       </main>
       <Footer />

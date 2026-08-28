@@ -20,10 +20,7 @@ const Experience = () => {
   ];
 
   return (
-    <section id="experience" className="section-padding bg-dark-light relative overflow-hidden">
-      {/* Background Decoration */}
-      <div className="absolute top-0 left-0 w-1/4 h-full bg-gradient-to-r from-primary/5 to-transparent"></div>
-      
+    <section id="experience" className="section-padding bg-white relative overflow-hidden">
       <div className="container-custom relative z-10">
         {/* Section Header */}
         <div className="text-center mb-16">
@@ -35,7 +32,7 @@ const Experience = () => {
         <div className="max-w-4xl mx-auto">
           <div className="relative">
             {/* Timeline Line */}
-            <div className="absolute left-8 lg:left-1/2 transform lg:-translate-x-1/2 h-full w-0.5 bg-gradient-to-b from-primary via-secondary to-primary/30"></div>
+            <div className="absolute left-8 lg:left-1/2 transform lg:-translate-x-1/2 h-full w-0.5 bg-light-gray"></div>
             
             <div className="space-y-12">
               {experiences.map((exp, index) => (
@@ -46,7 +43,7 @@ const Experience = () => {
                   }`}
                 >
                   {/* Timeline Dot */}
-                  <div className="absolute left-8 lg:left-1/2 transform -translate-x-1/2 w-5 h-5 bg-gradient-to-br from-primary to-secondary rounded-full border-4 border-dark-light shadow-glow z-10"></div>
+                  <div className="absolute left-8 lg:left-1/2 transform -translate-x-1/2 w-5 h-5 bg-primary rounded-full border-4 border-white shadow-md z-10"></div>
                   
                   {/* Content Card */}
                   <div className={`ml-20 lg:ml-0 lg:w-1/2 ${index % 2 === 0 ? 'lg:pr-12' : 'lg:pl-12'}`}>
@@ -89,8 +86,8 @@ const Experience = () => {
                       {/* Achievements */}
                       <div className="mb-6">
                         <h4 className="font-semibold text-text-primary mb-3 flex items-center gap-2">
-                          <span className="w-6 h-6 rounded-full bg-secondary/10 flex items-center justify-center">
-                            <svg className="w-3 h-3 text-secondary" fill="currentColor" viewBox="0 0 20 20">
+                          <span className="w-6 h-6 rounded-full bg-primary/10 flex items-center justify-center">
+                            <svg className="w-3 h-3 text-primary" fill="currentColor" viewBox="0 0 20 20">
                               <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
                             </svg>
                           </span>
@@ -99,7 +96,7 @@ const Experience = () => {
                         <ul className="space-y-2">
                           {exp.achievements.map((achievement, achIndex) => (
                             <li key={achIndex} className="flex items-start text-sm text-text-secondary">
-                              <span className="w-1.5 h-1.5 bg-secondary rounded-full mr-3 mt-2 flex-shrink-0"></span>
+                              <span className="w-1.5 h-1.5 bg-primary rounded-full mr-3 mt-2 flex-shrink-0"></span>
                               {achievement}
                             </li>
                           ))}
