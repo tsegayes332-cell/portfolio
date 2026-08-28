@@ -37,24 +37,19 @@ const Skills = () => {
 
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
           {categories.map((category) => (
-            <div key={category} className="bg-white rounded-2xl p-6 card-hover border border-light-gray">
-              <h3 className="text-xl font-semibold text-text-primary mb-6 border-b border-light-gray pb-3">
+            <div key={category} className="bg-white rounded-xl p-5 border border-light-gray">
+              <h3 className="text-base font-semibold text-text-primary mb-5 pb-3 border-b border-light-gray">
                 {category}
               </h3>
-
-              <div className="space-y-4">
+              <div className="space-y-3">
                 {getSkillsByCategory(category).map((skill, index) => (
                   <div key={index}>
-                    <div className="flex justify-between mb-2">
-                      <span className="text-sm font-medium text-text-primary">{skill.name}</span>
-                      <span className="text-sm text-text-secondary">{skill.level}%</span>
+                    <div className="flex justify-between mb-1">
+                      <span className="text-sm text-text-primary">{skill.name}</span>
+                      <span className="text-xs text-text-secondary">{skill.level}%</span>
                     </div>
-
-                    <div className="w-full bg-light-gray/60 rounded-full h-2 overflow-hidden">
-                      <div
-                        className="h-2 rounded-full bg-primary"
-                        style={{ width: `${skill.level}%` }}
-                      />
+                    <div className="w-full bg-light-gray rounded-full h-1.5">
+                      <div className="h-1.5 rounded-full bg-primary" style={{ width: `${skill.level}%` }} />
                     </div>
                   </div>
                 ))}

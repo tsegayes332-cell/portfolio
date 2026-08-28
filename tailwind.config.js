@@ -6,24 +6,24 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        'primary': '#654321',
-        'primary-light': '#8a6544',
-        'secondary': '#c9a227',
-        'accent': '#b7863e',
-        'dark': '#fbf7ef',
+        'primary': '#2563eb',
+        'primary-light': '#3b82f6',
+        'secondary': '#64748b',
+        'accent': '#654321',
+        'dark': '#f8fafc',
         'dark-light': '#ffffff',
         'light': '#ffffff',
-        'light-gray': '#e9dfd0',
-        'text-primary': '#2b2116',
-        'text-secondary': '#7c6a56',
-        'coffee': '#2b2116',
+        'light-gray': '#e2e8f0',
+        'text-primary': '#0f172a',
+        'text-secondary': '#64748b',
+        'coffee': '#0f172a',
       },
       fontFamily: {
         'sans': ['Poppins', 'system-ui', 'sans-serif'],
         'heading': ['Poppins', 'system-ui', 'sans-serif'],
       },
       boxShadow: {
-        'soft': '0 4px 20px -2px rgba(101, 67, 33, 0.08)',
+        'soft': '0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px -1px rgba(0, 0, 0, 0.1)',
       },
       animation: {
         'fade-in': 'fadeIn 0.8s ease-out',

@@ -14,7 +14,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-color: #ffffff;
-  color: #2b2116;
+  color: #0f172a;
 }
 
 code {
@@ -22,40 +22,33 @@ code {
     monospace;
 }
 
-/* Accent Text Color */
-.gradient-gold {
-  color: #c9a227;
-}
-
 /* Card Hover Effects */
 .card-hover {
-  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: all 0.3s ease;
 }
 
 .card-hover:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 25px 50px -12px rgba(101, 67, 33, 0.2);
+  transform: translateY(-4px);
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
 }
 
 /* Button Styles */
 .btn-primary {
-  @apply px-8 py-3 bg-primary text-white rounded-lg font-medium transition-all duration-300;
+  @apply px-8 py-3 bg-primary text-white rounded-lg font-medium transition-all duration-200;
 }
 
 .btn-primary:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 12px 30px -10px rgba(101, 67, 33, 0.45);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(37, 99, 235, 0.4);
 }
 
 .btn-secondary {
-  @apply px-8 py-3 border-2 border-primary text-primary rounded-lg font-medium transition-all duration-300 bg-white/40;
+  @apply px-8 py-3 border border-gray-300 text-text-primary rounded-lg font-medium transition-all duration-200;
 }
 
 .btn-secondary:hover {
-  background: #654321;
-  border-color: #654321;
-  color: #ffffff;
-  transform: translateY(-2px);
+  background: #f8fafc;
+  border-color: #94a3b8;
 }
 
 /* Section Spacing */
@@ -65,46 +58,46 @@ code {
 
 /* Container */
 .container-custom {
-  @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+  @apply max-w-6xl mx-auto px-4 sm:px-6 lg:px-8;
 }
 
 /* Section Title */
 .section-title {
-  @apply text-4xl md:text-5xl font-bold text-center mb-4;
+  @apply text-3xl md:text-4xl font-bold text-center mb-4;
 }
 
 .section-subtitle {
-  @apply text-lg text-text-secondary text-center max-w-2xl mx-auto mb-16;
+  @apply text-base text-text-secondary text-center max-w-xl mx-auto mb-16;
 }
 
-/* Decorative Elements */
+/* Decoration */
 .decoration-line {
-  width: 60px;
-  height: 4px;
-  background: linear-gradient(90deg, #654321, #c9a227);
+  width: 48px;
+  height: 3px;
+  background: #2563eb;
   border-radius: 2px;
 }
 
 /* Selection Color */
 ::selection {
-  background-color: #654321;
+  background-color: #2563eb;
   color: white;
 }
 
 /* Custom Scrollbar */
 ::-webkit-scrollbar {
-  width: 8px;
+  width: 6px;
 }
 
 ::-webkit-scrollbar-track {
-  background: #fbf7ef;
+  background: #f1f5f9;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #654321;
-  border-radius: 4px;
+  background: #94a3b8;
+  border-radius: 3px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #8a6544;
+  background: #64748b;
 }
