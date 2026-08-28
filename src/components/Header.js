@@ -43,7 +43,7 @@ const Header = () => {
       <nav className="container-custom flex justify-between items-center">
         <a href="#home" className="flex items-center gap-2.5">
           <svg className="w-8 h-8" viewBox="0 0 64 64" aria-label="Selamawit Tsegaye">
-            <rect width="64" height="64" rx="14" fill="#2563eb" />
+            <rect width="64" height="64" rx="14" fill="#6B4226" />
             <text x="32" y="43" fontFamily="Poppins, Arial, sans-serif" fontSize="28" fontWeight="700" fill="#ffffff" textAnchor="middle">ST</text>
           </svg>
           <span className={`text-lg font-bold transition-colors ${
