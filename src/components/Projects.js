@@ -38,6 +38,17 @@ const Projects = () => {
       featured: true,
     },
     {
+      id: 7,
+      title: "Beauty Salon Website",
+      description: "Responsive website for a beauty salon with service browsing, appointment booking, and gallery. Clean UI focused on user experience.",
+      image: "/images/projects/beauty-salon.jpg",
+      category: "frontend",
+      tags: ["React", "CSS", "JavaScript", "Responsive Design"],
+      github: "https://github.com/tsegayes332-cell/beauty-salon-website",
+      demo: "https://beauty-salon-l2hl.vercel.app",
+      featured: true,
+    },
+    {
       id: 4,
       title: "Front-End Projects",
       description: "Collection of frontend practice projects — landing pages, interactive components, UI experiments. Clean, responsive implementations.",
