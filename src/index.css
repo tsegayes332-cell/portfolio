@@ -13,8 +13,8 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: #FFFBF5;
-  color: #3C2415;
+  background-color: #FFFFFF;
+  color: #111827;
 }
 
 code {
@@ -29,7 +29,7 @@ code {
 
 .card-hover:hover {
   transform: translateY(-4px);
-  box-shadow: 0 10px 25px -5px rgba(60, 36, 21, 0.1);
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
 }
 
 /* Button Styles */
@@ -39,7 +39,7 @@ code {
 
 .btn-primary:hover {
   transform: translateY(-1px);
-  box-shadow: 0 4px 12px rgba(107, 66, 38, 0.35);
+  box-shadow: 0 4px 14px rgba(37, 99, 235, 0.4);
 }
 
 .btn-secondary {
@@ -47,8 +47,8 @@ code {
 }
 
 .btn-secondary:hover {
-  background: #FFFFFF;
-  border-color: #A66A3F;
+  background: #F8FAFC;
+  border-color: #2563EB;
 }
 
 /* Section Spacing */
@@ -74,13 +74,13 @@ code {
 .decoration-line {
   width: 48px;
   height: 3px;
-  background: #6B4226;
+  background: #2563EB;
   border-radius: 2px;
 }
 
 /* Selection Color */
 ::selection {
-  background-color: #6B4226;
+  background-color: #2563EB;
   color: white;
 }
 
@@ -90,14 +90,14 @@ code {
 }
 
 ::-webkit-scrollbar-track {
-  background: #FFFBF5;
+  background: #F8FAFC;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #E5D8CC;
+  background: #E5E7EB;
   border-radius: 3px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #A66A3F;
+  background: #2563EB;
 }

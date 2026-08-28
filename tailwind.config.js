@@ -6,15 +6,16 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        'primary': '#6B4226',
-        'primary-light': '#7D5A3A',
-        'secondary': '#A66A3F',
-        'accent': '#A66A3F',
-        'dark': '#FFFBF5',
+        'primary': '#2563EB',
+        'primary-light': '#3B82F6',
+        'primary-dark': '#1E3A8A',
+        'secondary': '#6B7280',
+        'accent': '#2563EB',
+        'dark': '#F8FAFC',
         'light': '#FFFFFF',
-        'light-gray': '#E5D8CC',
-        'text-primary': '#3C2415',
-        'text-secondary': '#6B4226',
+        'light-gray': '#E5E7EB',
+        'text-primary': '#111827',
+        'text-secondary': '#6B7280',
       },
       fontFamily: {
         'sans': ['Poppins', 'system-ui', 'sans-serif'],
@@ -22,6 +23,8 @@ module.exports = {
       },
       boxShadow: {
         'soft': '0 1px 3px 0 rgba(0, 0, 0, 0.08), 0 1px 2px -1px rgba(0, 0, 0, 0.06)',
+        'card': '0 4px 6px -1px rgba(0, 0, 0, 0.07), 0 2px 4px -2px rgba(0, 0, 0, 0.05)',
+        'card-hover': '0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.06)',
       },
       animation: {
         'fade-in': 'fadeIn 0.8s ease-out',
