@@ -19,8 +19,8 @@ const Contact = () => {
         </svg>
       ),
       title: "Phone",
-      value: "+251 91 123 4567",
-      href: "tel:+251911234567"
+      value: "0940680260",
+      href: "tel:+251940680260"
     },
     {
       icon: (
