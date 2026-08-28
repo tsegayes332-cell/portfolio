@@ -6,7 +6,7 @@ const Projects = () => {
   const projects = [
     {
       id: 1,
-      title: "Habesha 251 Events",
+      title: "Habesha Events",
       description: "Bilingual event management platform for Ethiopian events with ticket purchasing, calendar integration, and admin moderation.",
       image: "/images/projects/habesha-events.jpg",
       category: "fullstack",
