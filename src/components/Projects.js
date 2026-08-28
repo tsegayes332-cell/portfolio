@@ -64,18 +64,18 @@ const Projects = () => {
     {
       id: 4,
       title: "Beauty Salon Website",
-      description: "Responsive website for a beauty salon with service browsing, appointment booking, and gallery. Clean UI focused on user experience.",
+      description: "Full-stack salon management platform with appointment booking, role-based dashboards, and admin analytics.",
       image: "/images/projects/beauty-salon.jpg",
-      category: "frontend",
-      technologies: ["React", "CSS", "JavaScript", "Responsive Design"],
-      role: "Frontend Developer",
+      category: "fullstack",
+      technologies: ["React", "Node.js", "Express", "MySQL", "JWT", "Recharts", "react-big-calendar", "Vercel"],
+      role: "Full-Stack Developer",
       keyFeatures: [
-        "Service browsing with detailed descriptions",
-        "Appointment booking system",
-        "Photo gallery showcase",
-        "Contact and location integration"
+        "Appointment Booking System — browse services, pick a specialist, select date/time. Double-booking prevention at API level",
+        "Role-Based Portals — three separate dashboards (Admin, Staff, Customer) with protected routes",
+        "Admin Management Panel — CRUD for services, staff, users. Real-time analytics with charts and calendar view",
+        "Cloud Deployment — Vercel with serverless Express backend, API proxy rewrites, and Aiven MySQL"
       ],
-      contribution: "Designed and built the complete frontend — from wireframe to responsive implementation.",
+      contribution: "Built the React frontend from scratch — routing, context/auth state management, all UI components, responsive layout, and the pink luxury design system. Built the Node.js/Express backend — RESTful API with JWT authentication, bcrypt password hashing, role-based access middleware, rate limiting, and MySQL database layer. Implemented the booking workflow including staff acceptance, completion, cancellation, and conflict detection. Handled deployment and DevOps — Vercel config, CORS setup, database SSL/port support for cloud MySQL, and API proxy configuration.",
       github: "https://github.com/tsegayes332-cell/beauty-salon-website",
       demo: "https://beauty-salon-l2hl.vercel.app",
       featured: true,
