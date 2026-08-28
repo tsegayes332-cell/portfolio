@@ -23,7 +23,7 @@ const Projects = () => {
       category: "frontend",
       tags: ["React", "CSS", "JavaScript", "Responsive Design"],
       github: "https://github.com/tsegayes332-cell/beauty-salon-website",
-      demo: "https://beauty-salon-website-liart.vercel.app",
+      demo: "https://beauty-salon-l2hl.vercel.app",
       featured: true,
     },
     {
