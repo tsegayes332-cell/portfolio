@@ -4,6 +4,8 @@
 # misc
 .DS_Store
 *.pem
+server.log
+.qoder
 
 # debug
 npm-debug.log*
