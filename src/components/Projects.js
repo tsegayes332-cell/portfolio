@@ -1,7 +1,9 @@
 import React, { useState } from 'react';
+import useScrollAnimation from '../hooks/useScrollAnimation';
 
 const Projects = () => {
   const [activeFilter, setActiveFilter] = useState('all');
+  const [ref, isVisible] = useScrollAnimation();
 
   const projects = [
     {
@@ -114,6 +116,7 @@ const Projects = () => {
   return (
     <section id="projects" className="section-padding bg-white">
       <div className="container-custom">
+        <div ref={ref} className={`transition-all duration-700 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
         <div className="text-center mb-16">
           <p className="text-primary font-medium text-sm tracking-wider uppercase mb-4 block bg-primary/5 inline-block px-3 py-1 rounded-full">Portfolio</p>
           <h2 className="section-title">Featured Projects</h2>
@@ -253,6 +256,7 @@ const Projects = () => {
               </div>
             </div>
           ))}
+        </div>
         </div>
       </div>
     </section>

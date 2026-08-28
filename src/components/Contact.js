@@ -1,6 +1,9 @@
 import React from 'react';
+import useScrollAnimation from '../hooks/useScrollAnimation';
 
 const Contact = () => {
+  const [ref, isVisible] = useScrollAnimation();
+
   const contactInfo = [
     {
       icon: (
@@ -38,35 +41,37 @@ const Contact = () => {
   return (
     <section id="contact" className="section-padding bg-dark">
       <div className="container-custom">
-        <div className="text-center mb-16">
-          <p className="text-primary font-medium text-sm tracking-wider uppercase mb-4 block bg-primary/5 inline-block px-3 py-1 rounded-full">Get In Touch</p>
-          <h2 className="section-title">Contact Me</h2>
-          <div className="decoration-line mx-auto mt-4"></div>
-          <p className="text-text-secondary max-w-xl mx-auto mt-6">
-            Have a project in mind or want to discuss opportunities? I'd love to hear from you.
-          </p>
-        </div>
+        <div ref={ref} className={`transition-all duration-700 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
+          <div className="text-center mb-16">
+            <p className="text-primary font-medium text-sm tracking-wider uppercase mb-4 block bg-primary/5 inline-block px-3 py-1 rounded-full">Get In Touch</p>
+            <h2 className="section-title">Contact Me</h2>
+            <div className="decoration-line mx-auto mt-4"></div>
+            <p className="text-text-secondary max-w-xl mx-auto mt-6">
+              Have a project in mind or want to discuss opportunities? I'd love to hear from you.
+            </p>
+          </div>
 
-        <div className="max-w-2xl mx-auto space-y-4">
-          {contactInfo.map((info, index) => (
-            <div key={index} className="bg-white rounded-xl p-5 border border-light-gray">
-              <div className="flex items-center space-x-4">
-                <div className="w-10 h-10 bg-primary/10 rounded-lg flex items-center justify-center text-primary flex-shrink-0">
-                  {info.icon}
-                </div>
-                <div>
-                  <h3 className="text-sm font-semibold text-text-primary mb-0.5">{info.title}</h3>
-                  {info.href ? (
-                    <a href={info.href} className="text-sm text-text-secondary hover:text-primary transition-colors">
-                      {info.value}
-                    </a>
-                  ) : (
-                    <p className="text-sm text-text-secondary">{info.value}</p>
-                  )}
+          <div className="max-w-2xl mx-auto space-y-4 stagger-children">
+            {contactInfo.map((info, index) => (
+              <div key={index} className="bg-white rounded-xl p-5 border border-light-gray card-hover">
+                <div className="flex items-center space-x-4">
+                  <div className="w-10 h-10 bg-primary/10 rounded-lg flex items-center justify-center text-primary flex-shrink-0">
+                    {info.icon}
+                  </div>
+                  <div>
+                    <h3 className="text-sm font-semibold text-text-primary mb-0.5">{info.title}</h3>
+                    {info.href ? (
+                      <a href={info.href} className="text-sm text-text-secondary hover:text-primary transition-colors">
+                        {info.value}
+                      </a>
+                    ) : (
+                      <p className="text-sm text-text-secondary">{info.value}</p>
+                    )}
+                  </div>
                 </div>
               </div>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
       </div>
     </section>
