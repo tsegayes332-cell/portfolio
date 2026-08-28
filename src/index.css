@@ -113,6 +113,14 @@ code {
   background-size: 48px 48px;
 }
 
+/* Light Grid Pattern (for dark backgrounds) */
+.grid-pattern-light {
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.07) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.07) 1px, transparent 1px);
+  background-size: 48px 48px;
+}
+
 /* Selection Color */
 ::selection {
   background-color: #654321;

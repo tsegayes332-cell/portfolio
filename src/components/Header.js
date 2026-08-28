@@ -8,7 +8,7 @@ const Header = () => {
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 50);
-      
+
       // Update active section based on scroll position
       const sections = ['home', 'about', 'experience', 'projects', 'skills', 'education', 'testimonials', 'contact'];
       for (const section of sections) {
@@ -38,6 +38,8 @@ const Header = () => {
     { name: 'Contact', href: '#contact' },
   ];
 
+  const onHero = !isScrolled;
+
   return (
     <header
       className={`fixed top-0 w-full z-50 transition-all duration-500 ${
@@ -48,8 +50,13 @@ const Header = () => {
     >
       <nav className="container-custom flex justify-between items-center">
         {/* Logo */}
-        <a href="#home" className="font-heading text-2xl font-bold text-text-primary hover:text-primary transition-colors duration-300">
-          Selamawit<span className="text-primary">.</span>
+        <a
+          href="#home"
+          className={`font-heading text-2xl font-bold transition-colors duration-300 ${
+            onHero ? 'text-white hover:text-secondary' : 'text-text-primary hover:text-primary'
+          }`}
+        >
+          Selamawit<span className="text-secondary">.</span>
         </a>
 
         {/* Desktop Navigation */}
@@ -61,23 +68,33 @@ const Header = () => {
                 key={item.name}
                 href={item.href}
                 className={`relative px-4 py-2 text-sm font-medium transition-all duration-300 rounded-lg ${
-                  isActive 
-                    ? 'text-primary bg-primary/10' 
-                    : 'text-text-secondary hover:text-primary hover:bg-primary/5'
+                  onHero
+                    ? isActive
+                      ? 'text-white bg-white/10'
+                      : 'text-white/80 hover:text-white hover:bg-white/10'
+                    : isActive
+                      ? 'text-primary bg-primary/10'
+                      : 'text-text-secondary hover:text-primary hover:bg-primary/5'
                 }`}
               >
                 {item.name}
                 {isActive && (
-                  <span className="absolute bottom-1 left-1/2 transform -translate-x-1/2 w-1 h-1 bg-primary rounded-full"></span>
+                  <span className={`absolute bottom-1 left-1/2 transform -translate-x-1/2 w-1 h-1 rounded-full ${
+                    onHero ? 'bg-secondary' : 'bg-primary'
+                  }`}></span>
                 )}
               </a>
             );
           })}
-          
+
           {/* CTA Button */}
           <a
             href="#contact"
-            className="ml-4 px-5 py-2.5 bg-primary text-white text-sm font-medium rounded-lg hover:bg-primary-light transition-all duration-300 shadow-soft hover:shadow-glow"
+            className={`ml-4 px-5 py-2.5 text-sm font-medium rounded-lg transition-all duration-300 shadow-soft ${
+              onHero
+                ? 'bg-secondary text-coffee hover:bg-accent hover:text-white'
+                : 'bg-primary text-white hover:bg-primary-light'
+            }`}
           >
             Hire Me
           </a>
@@ -85,7 +102,11 @@ const Header = () => {
 
         {/* Mobile Menu Button */}
         <button
-          className="lg:hidden w-10 h-10 flex items-center justify-center rounded-lg bg-primary/5 text-primary hover:bg-primary hover:text-white transition-all duration-300"
+          className={`lg:hidden w-10 h-10 flex items-center justify-center rounded-lg transition-all duration-300 ${
+            onHero
+              ? 'bg-white/10 text-white hover:bg-white hover:text-primary'
+              : 'bg-primary/5 text-primary hover:bg-primary hover:text-white'
+          }`}
           onClick={() => setIsMenuOpen(!isMenuOpen)}
           aria-label="Toggle menu"
         >
@@ -124,8 +145,8 @@ const Header = () => {
                     key={item.name}
                     href={item.href}
                     className={`block px-4 py-3 rounded-lg font-medium transition-all duration-300 ${
-                      isActive 
-                        ? 'text-primary bg-primary/10' 
+                      isActive
+                        ? 'text-primary bg-primary/10'
                         : 'text-text-secondary hover:text-primary hover:bg-primary/5'
                     }`}
                     onClick={() => setIsMenuOpen(false)}

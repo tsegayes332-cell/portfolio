@@ -4,53 +4,58 @@ const Hero = () => {
   return (
     <section
       id="home"
-      className="min-h-screen flex items-center bg-gradient-to-br from-dark via-dark-light to-dark pt-24 lg:pt-20 relative overflow-hidden"
+      className="min-h-screen flex items-center bg-gradient-to-br from-primary via-primary-light to-coffee pt-24 lg:pt-20 relative overflow-hidden"
     >
       {/* Animated Gradient Mesh */}
-      <div className="absolute top-[-10%] left-[-10%] w-[45vw] h-[45vw] max-w-3xl max-h-3xl rounded-full bg-gradient-to-br from-primary/20 to-secondary/20 blur-3xl animate-blob"></div>
-      <div className="absolute bottom-[-15%] right-[-10%] w-[40vw] h-[40vw] max-w-2xl max-h-2xl rounded-full bg-gradient-to-tl from-accent/20 to-primary/10 blur-3xl animate-blob" style={{ animationDelay: '4s' }}></div>
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[60vw] h-[60vw] max-w-5xl max-h-5xl rounded-full bg-gradient-to-br from-primary/5 to-transparent blur-3xl"></div>
-      <div className="absolute inset-0 grid-pattern opacity-60"></div>
+      <div className="absolute top-[-10%] left-[-10%] w-[45vw] h-[45vw] max-w-3xl max-h-3xl rounded-full bg-secondary/20 blur-3xl animate-blob"></div>
+      <div className="absolute bottom-[-15%] right-[-10%] w-[40vw] h-[40vw] max-w-2xl max-h-2xl rounded-full bg-coffee/40 blur-3xl animate-blob" style={{ animationDelay: '4s' }}></div>
+      <div className="absolute inset-0 grid-pattern-light"></div>
 
       <div className="container-custom relative z-10">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           {/* Left: Content */}
           <div className="text-center lg:text-left">
             {/* Greeting Badge */}
-            <div className="inline-flex items-center gap-2 px-4 py-2 bg-white/80 backdrop-blur-sm rounded-full shadow-soft mb-6 border border-light-gray animate-fade-down">
+            <div className="inline-flex items-center gap-2 px-4 py-2 bg-white/10 backdrop-blur-sm rounded-full shadow-lg mb-6 border border-white/20 animate-fade-down">
               <span className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></span>
-              <span className="text-sm font-medium text-text-secondary">Available for opportunities</span>
+              <span className="text-sm font-medium text-white/85">Available for opportunities</span>
             </div>
 
             {/* Main Heading */}
-            <h1 className="font-heading text-5xl md:text-6xl xl:text-7xl font-bold text-text-primary mb-6 leading-tight animate-fade-up" style={{ animationDelay: '100ms' }}>
+            <h1 className="font-heading text-5xl md:text-6xl xl:text-7xl font-bold text-white mb-6 leading-tight animate-fade-up" style={{ animationDelay: '100ms' }}>
               Hi, I'm{' '}
-              <span className="gradient-text">Selamawit</span>
+              <span className="gradient-gold">Selamawit</span>
             </h1>
 
             {/* Subtitle */}
-            <h2 className="text-xl md:text-2xl text-text-secondary mb-6 font-light tracking-wide animate-fade-up" style={{ animationDelay: '200ms' }}>
-              Web Developer <span className="text-primary mx-2">&amp;</span> Mobile App Developer
+            <h2 className="text-xl md:text-2xl text-white/80 mb-6 font-light tracking-wide animate-fade-up" style={{ animationDelay: '200ms' }}>
+              Web Developer <span className="text-secondary mx-2">&amp;</span> Mobile App Developer
             </h2>
 
             {/* Decorative Line */}
-            <div className="decoration-line mx-auto lg:mx-0 mb-8 animate-fade-up" style={{ animationDelay: '300ms' }}></div>
+            <div className="w-[60px] h-1 bg-gradient-to-r from-secondary to-accent rounded-full mx-auto lg:mx-0 mb-8 animate-fade-up" style={{ animationDelay: '300ms' }}></div>
 
             {/* Description */}
-            <p className="text-lg text-text-secondary mb-10 max-w-xl mx-auto lg:mx-0 leading-relaxed animate-fade-up" style={{ animationDelay: '400ms' }}>
+            <p className="text-lg text-white/75 mb-10 max-w-xl mx-auto lg:mx-0 leading-relaxed animate-fade-up" style={{ animationDelay: '400ms' }}>
               I build web and mobile apps that actually work. Started coding because I needed to solve real problems,
               and stuck with it because there's nothing better than seeing something you built come to life.
             </p>
 
             {/* CTA Buttons */}
             <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start mb-8 animate-fade-up" style={{ animationDelay: '500ms' }}>
-              <a href="#projects" className="btn-primary inline-flex items-center justify-center">
+              <a
+                href="#projects"
+                className="px-8 py-3 bg-secondary text-coffee rounded-lg font-medium transition-all duration-300 hover:-translate-y-0.5 hover:shadow-xl inline-flex items-center justify-center"
+              >
                 View My Work
                 <svg className="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
                 </svg>
               </a>
-              <a href="#contact" className="btn-secondary inline-flex items-center justify-center">
+              <a
+                href="#contact"
+                className="px-8 py-3 border-2 border-white/70 text-white rounded-lg font-medium transition-all duration-300 hover:bg-white hover:text-primary hover:-translate-y-0.5 inline-flex items-center justify-center"
+              >
                 Get In Touch
               </a>
             </div>
@@ -60,7 +65,7 @@ const Hero = () => {
               <a
                 href="/resume.pdf"
                 download
-                className="inline-flex items-center gap-2 px-6 py-3 bg-white text-primary border border-primary/20 rounded-lg hover:bg-primary hover:text-white transition-all duration-300 font-medium shadow-soft hover:shadow-glow"
+                className="inline-flex items-center gap-2 px-6 py-3 bg-white text-primary rounded-lg hover:bg-secondary hover:text-coffee transition-all duration-300 font-medium shadow-lg"
               >
                 <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
@@ -81,7 +86,7 @@ const Hero = () => {
                   href={social.href}
                   target={social.href.startsWith('mailto') ? undefined : "_blank"}
                   rel={social.href.startsWith('mailto') ? undefined : "noopener noreferrer"}
-                  className="w-12 h-12 flex items-center justify-center rounded-full bg-white shadow-soft text-text-secondary hover:text-white hover:bg-primary hover:shadow-glow transition-all duration-300 border border-light-gray"
+                  className="w-12 h-12 flex items-center justify-center rounded-full bg-white/10 shadow-lg text-white hover:text-primary hover:bg-white transition-all duration-300 border border-white/25"
                 >
                   <svg className="w-5 h-5" fill={social.isPath ? "none" : "currentColor"} stroke={social.isPath ? "currentColor" : "none"} viewBox="0 0 24 24">
                     <path strokeLinecap={social.isPath ? "round" : undefined} strokeWidth={social.isPath ? 2 : undefined} d={social.icon} />
@@ -91,24 +96,24 @@ const Hero = () => {
             </div>
           </div>
 
-          {/* Right: Visual */}
-          <div className="hidden lg:flex justify-center animate-fade-up" style={{ animationDelay: '300ms' }}>
-            <div className="relative w-96 h-96">
+          {/* Right: Visual (also shown stacked on mobile) */}
+          <div className="flex justify-center animate-fade-up" style={{ animationDelay: '300ms' }}>
+            <div className="relative w-72 h-72 lg:w-96 lg:h-96">
               {/* Rotating dashed ring */}
-              <div className="absolute inset-[-28px] rounded-full border-2 border-dashed border-primary/30 animate-spin-slow"></div>
-              {/* Soft glow */}
-              <div className="absolute inset-0 bg-gradient-to-br from-primary via-primary-light to-secondary rounded-full blur-3xl opacity-20 animate-pulse"></div>
+              <div className="absolute inset-[-28px] rounded-full border-2 border-dashed border-white/30 animate-spin-slow"></div>
+              {/* Soft gold glow */}
+              <div className="absolute inset-0 bg-gradient-to-br from-secondary to-accent rounded-full blur-3xl opacity-25 animate-pulse"></div>
 
               {/* Main Circle */}
-              <div className="absolute inset-0 bg-gradient-to-br from-primary via-primary-light to-secondary rounded-full flex items-center justify-center shadow-coffee">
-                <div className="text-white text-center">
-                  <div className="font-heading text-8xl font-bold mb-2">ST</div>
-                  <div className="text-white/80 text-sm tracking-widest uppercase">Web &amp; Mobile Developer</div>
+              <div className="absolute inset-0 bg-white rounded-full flex items-center justify-center shadow-xl">
+                <div className="text-center">
+                  <div className="font-heading text-8xl font-bold gradient-text mb-2">ST</div>
+                  <div className="text-coffee/70 text-sm tracking-widest uppercase">Web &amp; Mobile Developer</div>
                 </div>
               </div>
 
               {/* Floating: experience badge */}
-              <div className="absolute -top-6 -right-8 bg-white p-4 rounded-2xl shadow-coffee border border-light-gray animate-float">
+              <div className="absolute -top-6 -right-6 lg:-right-8 bg-white p-4 rounded-2xl shadow-xl border border-light-gray animate-float">
                 <div className="flex items-center gap-3">
                   <div className="w-10 h-10 rounded-xl bg-primary/10 flex items-center justify-center text-primary">
                     <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -122,16 +127,16 @@ const Hero = () => {
                 </div>
               </div>
 
-              {/* Floating: availability badge */}
-              <div className="absolute -bottom-6 -left-8 bg-white p-4 rounded-2xl shadow-coffee border border-light-gray animate-float" style={{ animationDelay: '2s' }}>
+              {/* Floating: open to work badge */}
+              <div className="absolute -bottom-6 -left-6 lg:-left-8 bg-white p-4 rounded-2xl shadow-xl border border-light-gray animate-float" style={{ animationDelay: '2s' }}>
                 <div className="flex items-center gap-2">
                   <span className="w-3 h-3 bg-green-500 rounded-full animate-pulse"></span>
                   <span className="text-sm font-medium text-text-primary">Open to Work</span>
                 </div>
               </div>
 
-              {/* Floating: coffee decade dot */}
-              <div className="absolute top-8 -left-6 w-14 h-14 rounded-2xl bg-gradient-to-br from-secondary to-accent text-white flex items-center justify-center shadow-coffee animate-float-slow">
+              {/* Floating: mobile code dot */}
+              <div className="absolute top-8 -left-6 w-14 h-14 rounded-2xl bg-gradient-to-br from-secondary to-accent text-white flex items-center justify-center shadow-xl animate-float-slow">
                 <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z" />
                 </svg>
@@ -143,7 +148,7 @@ const Hero = () => {
 
       {/* Scroll Indicator */}
       <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
-        <a href="#about" className="text-text-secondary hover:text-primary transition-colors">
+        <a href="#about" className="text-white/70 hover:text-white transition-colors">
           <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 14l-7 7m0 0l-7-7m7 7V3" />
           </svg>
