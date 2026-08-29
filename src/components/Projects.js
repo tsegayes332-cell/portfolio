@@ -151,12 +151,12 @@ const Projects = () => {
                   href={project.demo || project.github}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="relative h-64 md:h-full bg-light-gray overflow-hidden block"
+                  className="relative min-h-[260px] md:min-h-[360px] h-full bg-slate-50 flex items-center justify-center p-3 sm:p-4 overflow-hidden block group"
                 >
                   <img
                     src={`${process.env.PUBLIC_URL || ''}${project.image}`}
                     alt={project.title}
-                    className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+                    className="w-full h-full max-h-[380px] object-contain rounded-lg shadow-sm group-hover:scale-105 transition-transform duration-300"
                     onError={(e) => {
                       e.target.style.display = 'none';
                       if (e.target.nextSibling) {
