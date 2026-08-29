@@ -245,7 +245,7 @@ const Hero = () => {
                     </div>
                     <div className="text-slate-400 text-xs pl-2 border-l-2 border-slate-700 py-1">
                       <div>✓ Systems: <span className="text-emerald-400">All Live &amp; Responsive</span></div>
-                      <div>✓ Projects Shipped: <span className="text-blue-400">5 Full-Stack &amp; Mobile</span></div>
+                      <div>✓ Projects Shipped: <span className="text-blue-400">4 Full-Stack &amp; Mobile</span></div>
                       <div>✓ Code Quality: <span className="text-blue-400">Clean, Modular &amp; Documented</span></div>
                       <div>✓ Database: <span className="text-amber-400">MongoDB, PostgreSQL, MySQL</span></div>
                     </div>
@@ -278,7 +278,7 @@ const Hero = () => {
                 🚀
               </div>
               <div>
-                <div className="text-xs font-bold text-slate-900">5+ Full-Stack Apps</div>
+                <div className="text-xs font-bold text-slate-900">4 Full-Stack &amp; Mobile Apps</div>
                 <div className="text-[11px] text-slate-500">Shipped &amp; Tested</div>
               </div>
             </div>

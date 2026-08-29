@@ -60,7 +60,7 @@ const Skills = () => {
         {/* Stats row */}
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mt-10">
           {[
-            { label: 'Projects Shipped', value: '5+' },
+            { label: 'Featured Apps', value: '4' },
             { label: 'Core Languages', value: '6+' },
             { label: 'Frameworks & Tools', value: '10+' },
             { label: 'Production Ready', value: '100%' }

@@ -42,24 +42,6 @@ const Projects = () => {
     },
     {
       id: 3,
-      title: "BSD Website",
-      description: "Business website with modern design, responsive layout, and interactive features built for a professional organization.",
-      image: "/images/projects/bsd-website.jpg",
-      category: "frontend",
-      technologies: ["React", "Tailwind CSS", "JavaScript", "Responsive Design"],
-      role: "Frontend Developer",
-      keyFeatures: [
-        "Modern responsive layout",
-        "Interactive UI components",
-        "Smooth animations and transitions",
-        "Mobile-first design approach"
-      ],
-      github: "https://github.com/tsegayes332-cell/bsd-website",
-      demo: "https://bsd-website.vercel.app",
-      featured: true,
-    },
-    {
-      id: 4,
       title: "Beauty Salon Website",
       description: "Full-stack salon management platform with appointment booking, role-based dashboards, and admin analytics.",
       image: "/images/projects/beauty-salon.jpg",
@@ -77,7 +59,7 @@ const Projects = () => {
       featured: true,
     },
     {
-      id: 5,
+      id: 4,
       title: "Farmers Marketplace",
       description: "Cross-platform mobile app connecting farmers directly with buyers. Features real-time messaging, payment integration, and multi-language support.",
       image: "/images/projects/farmers-marketplace.jpg",
@@ -97,7 +79,6 @@ const Projects = () => {
 
   const filters = [
     { name: 'All', value: 'all' },
-    { name: 'Frontend', value: 'frontend' },
     { name: 'Full Stack', value: 'fullstack' },
     { name: 'Mobile', value: 'mobile' },
   ];
