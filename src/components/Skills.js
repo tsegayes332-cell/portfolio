@@ -1,69 +1,98 @@
 import React from 'react';
-import useScrollAnimation from '../hooks/useScrollAnimation';
 
 const Skills = () => {
-  const [ref, isVisible] = useScrollAnimation();
-
-  const skills = [
-    { name: "HTML/CSS", level: 90, category: "Frontend" },
-    { name: "JavaScript", level: 85, category: "Frontend" },
-    { name: "React Native", level: 80, category: "Frontend" },
-    { name: "Responsive Design", level: 90, category: "Frontend" },
-    { name: "PHP", level: 75, category: "Backend" },
-    { name: "MySQL", level: 80, category: "Backend" },
-    { name: "Database Management", level: 75, category: "Backend" },
-    { name: "TypeScript", level: 70, category: "Backend" },
-    { name: "Git", level: 85, category: "Tools" },
-    { name: "GitHub", level: 85, category: "Tools" },
-    { name: "Expo", level: 80, category: "Tools" },
-    { name: "Agile/Scrum", level: 75, category: "Tools" },
-    { name: "UI/UX Design", level: 85, category: "Design" },
-    { name: "Mobile App Design", level: 80, category: "Design" },
-    { name: "User Research", level: 75, category: "Design" },
-    { name: "Prototyping", level: 80, category: "Design" }
+  const skillGroups = [
+    {
+      category: 'Frontend',
+      icon: '🖥️',
+      color: '#2563EB',
+      bg: 'rgba(37,99,235,0.07)',
+      border: 'rgba(37,99,235,0.15)',
+      skills: ['React', 'React Native', 'JavaScript', 'TypeScript', 'HTML/CSS', 'Tailwind CSS', 'Responsive Design']
+    },
+    {
+      category: 'Backend',
+      icon: '⚙️',
+      color: '#7c3aed',
+      bg: 'rgba(124,58,237,0.07)',
+      border: 'rgba(124,58,237,0.15)',
+      skills: ['Node.js', 'Express', 'PHP', 'REST API', 'Socket.io', 'JWT', 'MySQL', 'MongoDB', 'PostgreSQL']
+    },
+    {
+      category: 'Mobile',
+      icon: '📱',
+      color: '#059669',
+      bg: 'rgba(5,150,105,0.07)',
+      border: 'rgba(5,150,105,0.15)',
+      skills: ['React Native', 'Expo', 'Redux', 'React Navigation', 'Firebase', 'Mobile UI/UX']
+    },
+    {
+      category: 'Tools & Other',
+      icon: '🛠️',
+      color: '#d97706',
+      bg: 'rgba(217,119,6,0.07)',
+      border: 'rgba(217,119,6,0.15)',
+      skills: ['Git', 'GitHub', 'Vercel', 'Prisma', 'Agile/Scrum', 'UI/UX Design', 'Figma', 'i18next']
+    }
   ];
-
-  const categories = ["Frontend", "Backend", "Tools", "Design"];
-
-  const getSkillsByCategory = (category) => {
-    return skills.filter(skill => skill.category === category);
-  };
 
   return (
     <section id="skills" className="section-padding bg-dark">
       <div className="container-custom">
-        <div ref={ref} className={`transition-all duration-700 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
-          <div className="text-center mb-16">
-            <p className="text-primary font-medium text-sm tracking-wider uppercase mb-4 block bg-primary/5 inline-block px-3 py-1 rounded-full">Capabilities</p>
-            <h2 className="section-title">Technical Skills</h2>
-            <div className="decoration-line mx-auto mt-4"></div>
-          </div>
+        <div className="text-center mb-16">
+          <p className="text-primary font-medium text-sm tracking-wider uppercase mb-4 block bg-primary/5 inline-block px-3 py-1 rounded-full">Capabilities</p>
+          <h2 className="section-title">Technical Skills</h2>
+          <div className="decoration-line mx-auto mt-4"></div>
+          <p className="text-text-secondary max-w-xl mx-auto mt-6">
+            Technologies and tools I use to build web and mobile applications.
+          </p>
+        </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 stagger-children">
-            {categories.map((category) => (
-              <div key={category} className="bg-white rounded-xl p-5 border border-light-gray card-hover">
-                <h3 className="text-base font-semibold text-text-primary mb-5 pb-3 border-b border-light-gray">
-                  {category}
-                </h3>
-                <div className="space-y-3">
-                  {getSkillsByCategory(category).map((skill, index) => (
-                    <div key={index}>
-                      <div className="flex justify-between mb-1">
-                        <span className="text-sm text-text-primary">{skill.name}</span>
-                        <span className="text-xs text-text-secondary">{skill.level}%</span>
-                      </div>
-                      <div className="w-full bg-light-gray rounded-full h-1.5 overflow-hidden">
-                        <div
-                          className="h-1.5 rounded-full bg-primary transition-all duration-1000 ease-out"
-                          style={{ width: isVisible ? `${skill.level}%` : '0%' }}
-                        />
-                      </div>
-                    </div>
-                  ))}
+        <div className="grid md:grid-cols-2 gap-6">
+          {skillGroups.map((group) => (
+            <div key={group.category}
+              className="bg-white rounded-2xl p-6 border card-hover"
+              style={{ borderColor: group.border }}>
+              {/* Header */}
+              <div className="flex items-center gap-3 mb-5 pb-4" style={{ borderBottom: `1px solid ${group.border}` }}>
+                <div className="w-10 h-10 rounded-xl flex items-center justify-center text-xl"
+                  style={{ background: group.bg }}>
+                  {group.icon}
                 </div>
+                <h3 className="text-base font-bold text-text-primary">{group.category}</h3>
               </div>
-            ))}
-          </div>
+
+              {/* Skill tags */}
+              <div className="flex flex-wrap gap-2">
+                {group.skills.map((skill) => (
+                  <span key={skill}
+                    className="px-3 py-1.5 text-sm font-medium rounded-lg transition-all cursor-default hover:scale-105"
+                    style={{
+                      background: group.bg,
+                      color: group.color,
+                      border: `1px solid ${group.border}`
+                    }}>
+                    {skill}
+                  </span>
+                ))}
+              </div>
+            </div>
+          ))}
+        </div>
+
+        {/* Bottom stats row */}
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mt-10">
+          {[
+            { label: 'Projects Shipped', value: '5+' },
+            { label: 'Languages', value: '6+' },
+            { label: 'Frameworks', value: '8+' },
+            { label: 'Months of XP', value: '12+' }
+          ].map((stat) => (
+            <div key={stat.label} className="bg-white rounded-xl p-5 text-center border border-light-gray card-hover">
+              <div className="text-2xl font-bold text-primary mb-1">{stat.value}</div>
+              <div className="text-sm text-text-secondary">{stat.label}</div>
+            </div>
+          ))}
         </div>
       </div>
     </section>
