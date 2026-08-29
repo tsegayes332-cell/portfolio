@@ -6,16 +6,17 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        'primary': '#2563EB',
-        'primary-light': '#3B82F6',
-        'primary-dark': '#1E3A8A',
-        'secondary': '#64748B',
-        'accent': '#2563EB',
-        'dark': '#E0F2FE',
-        'light': '#FFFFFF',
-        'light-gray': '#BAE6FD',
-        'text-primary': '#0F172A',
-        'text-secondary': '#475569',
+        'primary': '#3B82F6',
+        'primary-light': '#60A5FA',
+        'primary-dark': '#1D4ED8',
+        'secondary': '#94A3B8',
+        'accent': '#3B82F6',
+        'dark': '#0B0F19',
+        'dark-card': '#1E293B',
+        'light': '#0F172A',
+        'light-gray': '#334155',
+        'text-primary': '#F8FAFC',
+        'text-secondary': '#94A3B8',
       },
       fontFamily: {
         'sans': ['Poppins', 'system-ui', 'sans-serif'],

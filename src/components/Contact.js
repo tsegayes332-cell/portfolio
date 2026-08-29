@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 
 const Contact = () => {
   const [form, setForm] = useState({ name: '', email: '', subject: '', message: '' });
-  const [status, setStatus] = useState(null); // null | 'sending' | 'sent' | 'error'
+  const [status, setStatus] = useState(null);
 
   const handleChange = (e) => {
     setForm({ ...form, [e.target.name]: e.target.value });
@@ -11,7 +11,6 @@ const Contact = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     setStatus('sending');
-    // Opens the default mail client with pre-filled fields
     const mailtoLink = `mailto:tsegayes332@gmail.com?subject=${encodeURIComponent(form.subject || 'Portfolio Contact')}&body=${encodeURIComponent(`Name: ${form.name}\nEmail: ${form.email}\n\n${form.message}`)}`;
     window.location.href = mailtoLink;
     setTimeout(() => {
@@ -55,101 +54,119 @@ const Contact = () => {
   ];
 
   return (
-    <section id="contact" className="section-padding" style={{ background: 'linear-gradient(135deg, #f0f4ff 0%, #f8f0ff 100%)' }}>
+    <section id="contact" className="section-padding bg-[#0B0F19] relative border-t border-slate-800/80">
       <div className="container-custom">
         <div className="text-center mb-16">
-          <p className="text-primary font-medium text-sm tracking-wider uppercase mb-4 block bg-primary/5 inline-block px-3 py-1 rounded-full">Get In Touch</p>
+          <p className="text-blue-400 font-medium text-xs tracking-wider uppercase mb-3 inline-block bg-blue-500/10 px-3 py-1 rounded-full border border-blue-500/20">Get In Touch</p>
           <h2 className="section-title">Contact Me</h2>
           <div className="decoration-line mx-auto mt-4"></div>
-          <p className="text-text-secondary max-w-xl mx-auto mt-6">
-            Have a project in mind or want to discuss opportunities? I'd love to hear from you.
+          <p className="text-slate-400 max-w-xl mx-auto mt-6 text-sm sm:text-base">
+            Have a project in mind or want to discuss full-time/contract opportunities? I'd love to connect.
           </p>
         </div>
 
-        <div className="grid lg:grid-cols-5 gap-10 max-w-5xl mx-auto">
+        <div className="grid lg:grid-cols-5 gap-8 max-w-5xl mx-auto">
           {/* Left: Contact Info */}
           <div className="lg:col-span-2 space-y-4">
             {contactInfo.map((info, index) => (
-              <div key={index} className="bg-white rounded-2xl p-5 border border-light-gray card-hover flex items-center gap-4">
-                <div className="w-11 h-11 bg-primary/10 rounded-xl flex items-center justify-center text-primary flex-shrink-0">
+              <div key={index} className="bg-[#1E293B] rounded-2xl p-5 border border-slate-800 hover:border-blue-500/40 transition-all flex items-center gap-4 shadow-md">
+                <div className="w-11 h-11 bg-blue-500/10 border border-blue-500/20 rounded-xl flex items-center justify-center text-blue-400 flex-shrink-0">
                   {info.icon}
                 </div>
                 <div>
-                  <p className="text-xs text-text-secondary font-medium uppercase tracking-wider mb-0.5">{info.title}</p>
+                  <p className="text-[11px] text-slate-400 font-bold uppercase tracking-wider mb-0.5">{info.title}</p>
                   {info.href ? (
-                    <a href={info.href} className="text-sm font-semibold text-text-primary hover:text-primary transition-colors">
+                    <a href={info.href} className="text-sm font-semibold text-white hover:text-blue-400 transition-colors">
                       {info.value}
                     </a>
                   ) : (
-                    <p className="text-sm font-semibold text-text-primary">{info.value}</p>
+                    <p className="text-sm font-semibold text-white">{info.value}</p>
                   )}
                 </div>
               </div>
             ))}
 
-            {/* GitHub link */}
-            <a href="https://github.com/tsegayes332-cell" target="_blank" rel="noopener noreferrer"
-              className="bg-white rounded-2xl p-5 border border-light-gray card-hover flex items-center gap-4 w-full">
-              <div className="w-11 h-11 bg-gray-100 rounded-xl flex items-center justify-center flex-shrink-0">
-                <svg className="w-5 h-5 text-gray-700" fill="currentColor" viewBox="0 0 24 24">
+            {/* GitHub Card */}
+            <a
+              href="https://github.com/tsegayes332-cell"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="bg-[#1E293B] rounded-2xl p-5 border border-slate-800 hover:border-blue-500/40 transition-all flex items-center gap-4 shadow-md group block"
+            >
+              <div className="w-11 h-11 bg-slate-800 border border-slate-700 rounded-xl flex items-center justify-center text-slate-300 group-hover:text-white flex-shrink-0">
+                <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
                   <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
                 </svg>
               </div>
               <div>
-                <p className="text-xs text-text-secondary font-medium uppercase tracking-wider mb-0.5">GitHub</p>
-                <p className="text-sm font-semibold text-text-primary">tsegayes332-cell</p>
+                <p className="text-[11px] text-slate-400 font-bold uppercase tracking-wider mb-0.5">GitHub</p>
+                <p className="text-sm font-semibold text-white group-hover:text-blue-400 transition-colors">tsegayes332-cell</p>
               </div>
             </a>
           </div>
 
           {/* Right: Contact Form */}
           <div className="lg:col-span-3">
-            <form onSubmit={handleSubmit} className="bg-white rounded-2xl p-8 border border-light-gray shadow-sm">
-              <h3 className="text-lg font-bold text-text-primary mb-6">Send a Message</h3>
+            <form onSubmit={handleSubmit} className="bg-[#1E293B] rounded-2xl p-7 sm:p-8 border border-slate-800 shadow-xl">
+              <h3 className="text-lg font-bold text-white mb-6">Send a Direct Message</h3>
 
               <div className="grid sm:grid-cols-2 gap-4 mb-4">
                 <div>
-                  <label className="block text-xs font-semibold text-text-secondary uppercase tracking-wider mb-2">Name</label>
+                  <label className="block text-xs font-bold text-slate-300 uppercase tracking-wider mb-2">Name</label>
                   <input
-                    type="text" name="name" value={form.name} onChange={handleChange} required
+                    type="text"
+                    name="name"
+                    value={form.name}
+                    onChange={handleChange}
+                    required
                     placeholder="Your name"
-                    className="w-full px-4 py-3 rounded-xl border border-light-gray text-sm text-text-primary placeholder-text-secondary focus:outline-none focus:border-primary transition-colors"
-                    style={{ background: '#f8fafc' }}
+                    className="w-full px-4 py-3 rounded-xl border border-slate-700 text-sm text-white placeholder-slate-500 bg-[#0F172A] focus:outline-none focus:border-blue-500 transition-colors"
                   />
                 </div>
                 <div>
-                  <label className="block text-xs font-semibold text-text-secondary uppercase tracking-wider mb-2">Email</label>
+                  <label className="block text-xs font-bold text-slate-300 uppercase tracking-wider mb-2">Email</label>
                   <input
-                    type="email" name="email" value={form.email} onChange={handleChange} required
+                    type="email"
+                    name="email"
+                    value={form.email}
+                    onChange={handleChange}
+                    required
                     placeholder="your@email.com"
-                    className="w-full px-4 py-3 rounded-xl border border-light-gray text-sm text-text-primary placeholder-text-secondary focus:outline-none focus:border-primary transition-colors"
-                    style={{ background: '#f8fafc' }}
+                    className="w-full px-4 py-3 rounded-xl border border-slate-700 text-sm text-white placeholder-slate-500 bg-[#0F172A] focus:outline-none focus:border-blue-500 transition-colors"
                   />
                 </div>
               </div>
 
               <div className="mb-4">
-                <label className="block text-xs font-semibold text-text-secondary uppercase tracking-wider mb-2">Subject</label>
+                <label className="block text-xs font-bold text-slate-300 uppercase tracking-wider mb-2">Subject</label>
                 <input
-                  type="text" name="subject" value={form.subject} onChange={handleChange}
-                  placeholder="What's this about?"
-                  className="w-full px-4 py-3 rounded-xl border border-light-gray text-sm text-text-primary placeholder-text-secondary focus:outline-none focus:border-primary transition-colors"
-                  style={{ background: '#f8fafc' }}
+                  type="text"
+                  name="subject"
+                  value={form.subject}
+                  onChange={handleChange}
+                  placeholder="Opportunity or Project inquiry"
+                  className="w-full px-4 py-3 rounded-xl border border-slate-700 text-sm text-white placeholder-slate-500 bg-[#0F172A] focus:outline-none focus:border-blue-500 transition-colors"
                 />
               </div>
 
               <div className="mb-6">
-                <label className="block text-xs font-semibold text-text-secondary uppercase tracking-wider mb-2">Message</label>
+                <label className="block text-xs font-bold text-slate-300 uppercase tracking-wider mb-2">Message</label>
                 <textarea
-                  name="message" value={form.message} onChange={handleChange} required rows={5}
-                  placeholder="Tell me about your project or opportunity..."
-                  className="w-full px-4 py-3 rounded-xl border border-light-gray text-sm text-text-primary placeholder-text-secondary focus:outline-none focus:border-primary transition-colors resize-none"
-                  style={{ background: '#f8fafc' }}
+                  name="message"
+                  value={form.message}
+                  onChange={handleChange}
+                  required
+                  rows={5}
+                  placeholder="Tell me about your team, role, or project..."
+                  className="w-full px-4 py-3 rounded-xl border border-slate-700 text-sm text-white placeholder-slate-500 bg-[#0F172A] focus:outline-none focus:border-blue-500 transition-colors resize-none"
                 />
               </div>
 
-              <button type="submit" disabled={status === 'sending'}
-                className="w-full btn-primary flex items-center justify-center gap-2 disabled:opacity-60">
+              <button
+                type="submit"
+                disabled={status === 'sending'}
+                className="w-full btn-primary flex items-center justify-center gap-2 font-semibold shadow-lg shadow-blue-600/30 disabled:opacity-60"
+              >
                 {status === 'sending' ? (
                   <>
                     <svg className="w-4 h-4 animate-spin" fill="none" viewBox="0 0 24 24">
@@ -171,8 +188,8 @@ const Contact = () => {
               </button>
 
               {status === 'sent' && (
-                <p className="text-center text-sm text-green-600 mt-3 font-medium">
-                  Thanks! Your email client should have opened. 📬
+                <p className="text-center text-sm text-emerald-400 mt-3 font-medium">
+                  Thanks! Your mail client has opened with your message. 📬
                 </p>
               )}
             </form>

@@ -6,19 +6,18 @@ const Hero = () => {
   return (
     <section
       id="home"
-      className="min-h-screen flex items-center relative overflow-hidden pt-24 pb-16"
-      style={{ background: 'linear-gradient(135deg, #f8fafc 0%, #ffffff 50%, #f1f5f9 100%)' }}
+      className="min-h-screen flex items-center relative overflow-hidden pt-28 pb-16 bg-[#0B0F19]"
     >
-      {/* Decorative background glow elements */}
+      {/* Background ambient tech glow */}
       <div
         style={{
           position: 'absolute',
-          top: '-100px',
-          right: '-100px',
-          width: '500px',
-          height: '500px',
+          top: '-120px',
+          right: '-120px',
+          width: '550px',
+          height: '550px',
           borderRadius: '50%',
-          background: 'radial-gradient(circle, rgba(37,99,235,0.08) 0%, transparent 70%)',
+          background: 'radial-gradient(circle, rgba(59,130,246,0.12) 0%, transparent 70%)',
           pointerEvents: 'none',
         }}
       />
@@ -30,41 +29,41 @@ const Hero = () => {
           width: '450px',
           height: '450px',
           borderRadius: '50%',
-          background: 'radial-gradient(circle, rgba(99,102,241,0.07) 0%, transparent 70%)',
+          background: 'radial-gradient(circle, rgba(124,58,237,0.1) 0%, transparent 70%)',
           pointerEvents: 'none',
         }}
       />
 
-      <div className="container-custom w-full">
+      <div className="container-custom w-full relative z-10">
         <div className="grid lg:grid-cols-12 gap-12 items-center">
           
-          {/* Left Column: Introduction & CTA (7 cols on lg) */}
+          {/* Left Column: Intro */}
           <div className="lg:col-span-6 text-center lg:text-left">
-            {/* Availability Pill */}
+            {/* Pill */}
             <div
               className="inline-flex items-center px-4 py-1.5 rounded-full mb-6 text-xs sm:text-sm font-medium"
               style={{
-                background: 'rgba(37,99,235,0.08)',
-                color: '#2563EB',
-                border: '1px solid rgba(37,99,235,0.2)',
+                background: 'rgba(59,130,246,0.1)',
+                color: '#60A5FA',
+                border: '1px solid rgba(59,130,246,0.25)',
               }}
             >
               Available for Full-time &amp; Contract Roles
             </div>
 
-            <h1 className="text-4xl sm:text-5xl xl:text-6xl font-extrabold text-black mb-4 leading-tight tracking-tight">
+            <h1 className="text-4xl sm:text-5xl xl:text-6xl font-extrabold text-white mb-4 leading-tight tracking-tight">
               Hi, I'm Selamawit
             </h1>
 
-            <h2 className="text-xl sm:text-2xl text-black font-bold mb-6 flex items-center justify-center lg:justify-start gap-2">
+            <h2 className="text-xl sm:text-2xl text-slate-300 font-bold mb-6 flex items-center justify-center lg:justify-start gap-2">
               <span>Full-Stack &amp; Mobile Developer</span>
             </h2>
 
             <div
-              className="w-16 h-1 rounded-full mx-auto lg:mx-0 mb-6 bg-primary"
+              className="w-16 h-1 rounded-full mx-auto lg:mx-0 mb-6 bg-blue-500"
             />
 
-            <p className="text-base sm:text-lg text-slate-600 mb-8 max-w-xl mx-auto lg:mx-0 leading-relaxed font-normal">
+            <p className="text-base sm:text-lg text-slate-400 mb-8 max-w-xl mx-auto lg:mx-0 leading-relaxed font-normal">
               Computer Science graduate from Haramaya University. I design and build production-ready web platforms and cross-platform mobile apps with a focus on clean architecture, performance, and real-world utility.
             </p>
 
@@ -83,9 +82,9 @@ const Hero = () => {
                   key={tech}
                   className="px-3 py-1 text-xs font-semibold rounded-md transition-all hover:scale-105"
                   style={{
-                    background: '#f1f5f9',
-                    color: '#334155',
-                    border: '1px solid #e2e8f0',
+                    background: '#1E293B',
+                    color: '#93C5FD',
+                    border: '1px solid #334155',
                   }}
                 >
                   {tech}
@@ -97,7 +96,7 @@ const Hero = () => {
             <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start mb-8">
               <a
                 href="#projects"
-                className="btn-primary inline-flex items-center justify-center gap-2 text-sm font-semibold shadow-lg shadow-blue-500/20"
+                className="btn-primary inline-flex items-center justify-center gap-2 text-sm font-semibold shadow-lg shadow-blue-600/30"
               >
                 <span>Explore Projects</span>
                 <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -117,7 +116,7 @@ const Hero = () => {
               <a
                 href="/resume.pdf"
                 download
-                className="inline-flex items-center gap-2 text-sm font-medium text-slate-600 hover:text-blue-600 transition-colors"
+                className="inline-flex items-center gap-2 text-sm font-medium text-slate-400 hover:text-blue-400 transition-colors"
               >
                 <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path
@@ -136,7 +135,7 @@ const Hero = () => {
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label="GitHub Profile"
-                  className="w-9 h-9 flex items-center justify-center rounded-lg border border-slate-200 text-slate-600 hover:text-blue-600 hover:border-blue-600 hover:bg-blue-50/50 transition-all"
+                  className="w-9 h-9 flex items-center justify-center rounded-lg border border-slate-700 bg-slate-850 text-slate-300 hover:text-blue-400 hover:border-blue-500 hover:bg-blue-500/10 transition-all"
                 >
                   <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
                     <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
@@ -145,7 +144,7 @@ const Hero = () => {
                 <a
                   href="mailto:tsegayes332@gmail.com"
                   aria-label="Email Contact"
-                  className="w-9 h-9 flex items-center justify-center rounded-lg border border-slate-200 text-slate-600 hover:text-blue-600 hover:border-blue-600 hover:bg-blue-50/50 transition-all"
+                  className="w-9 h-9 flex items-center justify-center rounded-lg border border-slate-700 bg-slate-850 text-slate-300 hover:text-blue-400 hover:border-blue-500 hover:bg-blue-500/10 transition-all"
                 >
                   <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path
@@ -160,16 +159,16 @@ const Hero = () => {
             </div>
           </div>
 
-          {/* Right Column: Code & Terminal Window (5/6 cols on lg) */}
+          {/* Right Column: Code & Terminal Window */}
           <div className="lg:col-span-6 relative mt-6 lg:mt-0">
-            {/* Background ambient glow behind editor */}
+            {/* Ambient glow behind editor */}
             <div
               style={{
                 position: 'absolute',
                 inset: '-12px',
                 borderRadius: '24px',
-                background: 'linear-gradient(135deg, rgba(37,99,235,0.25), rgba(124,58,237,0.2))',
-                filter: 'blur(20px)',
+                background: 'linear-gradient(135deg, rgba(59,130,246,0.3), rgba(124,58,237,0.25))',
+                filter: 'blur(24px)',
                 zIndex: 0,
               }}
             />
@@ -178,8 +177,8 @@ const Hero = () => {
             <div
               className="relative rounded-2xl overflow-hidden shadow-2xl border"
               style={{
-                background: '#0f172a',
-                borderColor: 'rgba(255,255,255,0.1)',
+                background: '#0F172A',
+                borderColor: 'rgba(255,255,255,0.12)',
                 zIndex: 1,
               }}
             >
@@ -187,11 +186,11 @@ const Hero = () => {
               <div
                 className="flex items-center justify-between px-4 py-3 border-b"
                 style={{
-                  background: '#1e293b',
+                  background: '#1E293B',
                   borderColor: 'rgba(255,255,255,0.08)',
                 }}
               >
-                {/* Window Controls Dots */}
+                {/* Window Controls */}
                 <div className="flex items-center gap-2">
                   <span className="w-3 h-3 rounded-full bg-rose-500 inline-block opacity-85 hover:opacity-100 transition-opacity" />
                   <span className="w-3 h-3 rounded-full bg-amber-500 inline-block opacity-85 hover:opacity-100 transition-opacity" />
@@ -227,7 +226,7 @@ const Hero = () => {
                 {/* Status Indicator */}
                 <div className="flex items-center gap-1.5 text-xs text-slate-400 font-mono">
                   <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
-                  <span className="hidden sm:inline text-[11px]">Ready</span>
+                  <span className="hidden sm:inline text-[11px] text-slate-300">Ready</span>
                 </div>
               </div>
 
@@ -329,7 +328,7 @@ const Hero = () => {
               <div
                 className="px-4 py-2 text-[11px] font-mono flex items-center justify-between border-t"
                 style={{
-                  background: '#0b1120',
+                  background: '#090D16',
                   borderColor: 'rgba(255,255,255,0.05)',
                   color: '#64748b',
                 }}
@@ -340,26 +339,26 @@ const Hero = () => {
               </div>
             </div>
 
-            {/* Floating Metric Badges */}
+            {/* Floating Badges */}
             <div
-              className="hidden sm:flex items-center gap-3 absolute -bottom-5 -left-4 bg-white rounded-xl p-3.5 border border-slate-200 shadow-xl"
+              className="hidden sm:flex items-center gap-3 absolute -bottom-5 -left-4 bg-[#1E293B] rounded-xl p-3.5 border border-slate-700 shadow-xl"
               style={{ zIndex: 2 }}
             >
-              <div className="w-9 h-9 rounded-lg bg-blue-50 text-blue-600 flex items-center justify-center font-bold text-base">
+              <div className="w-9 h-9 rounded-lg bg-blue-500/10 text-blue-400 flex items-center justify-center font-bold text-base border border-blue-500/20">
                 🚀
               </div>
               <div>
-                <div className="text-xs font-bold text-slate-900">5+ Full-Stack Apps</div>
-                <div className="text-[11px] text-slate-500">Shipped &amp; Tested</div>
+                <div className="text-xs font-bold text-white">5+ Full-Stack Apps</div>
+                <div className="text-[11px] text-slate-400">Shipped &amp; Tested</div>
               </div>
             </div>
 
             <div
-              className="hidden sm:flex items-center gap-2 absolute -top-4 -right-3 bg-white rounded-xl px-3.5 py-2 border border-slate-200 shadow-lg"
+              className="hidden sm:flex items-center gap-2 absolute -top-4 -right-3 bg-[#1E293B] rounded-xl px-3.5 py-2 border border-slate-700 shadow-lg"
               style={{ zIndex: 2 }}
             >
-              <span className="w-2.5 h-2.5 rounded-full bg-emerald-500 animate-pulse" />
-              <span className="text-xs font-semibold text-slate-800">Open to Work</span>
+              <span className="w-2.5 h-2.5 rounded-full bg-emerald-400 animate-pulse" />
+              <span className="text-xs font-semibold text-slate-200">Open to Work</span>
             </div>
           </div>
 
@@ -370,7 +369,7 @@ const Hero = () => {
       <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2">
         <a
           href="#about"
-          className="text-slate-400 hover:text-blue-600 transition-colors p-2 inline-block"
+          className="text-slate-500 hover:text-blue-400 transition-colors p-2 inline-block"
           aria-label="Scroll to About section"
         >
           <svg className="w-5 h-5 animate-bounce" fill="none" stroke="currentColor" viewBox="0 0 24 24">

@@ -12,7 +12,7 @@ import ScrollToTop from './components/ScrollToTop';
 
 function App() {
   return (
-    <div className="min-h-screen bg-light">
+    <div className="min-h-screen bg-[#0B0F19] text-slate-100">
       <Header />
       <main>
         <Hero />
