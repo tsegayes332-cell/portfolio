@@ -156,12 +156,14 @@ const Projects = () => {
                   className="relative h-64 md:h-full bg-light-gray overflow-hidden block"
                 >
                   <img
-                    src={project.image}
+                    src={`${process.env.PUBLIC_URL || ''}${project.image}`}
                     alt={project.title}
                     className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
                     onError={(e) => {
                       e.target.style.display = 'none';
-                      e.target.nextSibling.style.display = 'flex';
+                      if (e.target.nextSibling) {
+                        e.target.nextSibling.style.display = 'flex';
+                      }
                     }}
                   />
                   <div className="w-full h-full items-center justify-center bg-light hidden absolute inset-0">
