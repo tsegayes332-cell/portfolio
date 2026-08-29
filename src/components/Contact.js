@@ -57,7 +57,6 @@ const Contact = () => {
     <section id="contact" className="section-padding bg-white border-t border-slate-200">
       <div className="container-custom">
         <div className="text-center mb-16">
-          <p className="text-primary font-medium text-xs tracking-wider uppercase mb-3 inline-block bg-blue-50 px-3 py-1 rounded-full border border-blue-100">Get In Touch</p>
           <h2 className="section-title">Contact Me</h2>
           <div className="decoration-line mx-auto mt-4"></div>
           <p className="text-slate-600 max-w-xl mx-auto mt-6 text-sm sm:text-base">

@@ -118,9 +118,6 @@ const Projects = () => {
 
         {/* Section Header */}
         <div className="text-center mb-12">
-          <p className="text-primary font-medium text-xs tracking-wider uppercase mb-3 inline-block bg-blue-50 px-3 py-1 rounded-full border border-blue-100">
-            Portfolio
-          </p>
           <h2 className="section-title">Featured Projects</h2>
           <div className="decoration-line mx-auto mt-4"></div>
           <p className="text-slate-600 max-w-xl mx-auto mt-6 text-sm sm:text-base">
@@ -148,7 +145,6 @@ const Projects = () => {
         {/* Projects Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-7">
           {filteredProjects.map((project) => {
-            const cat = categoryColors[project.category] || categoryColors.fullstack;
             return (
               <div
                 key={project.id}
@@ -176,27 +172,10 @@ const Projects = () => {
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
                     </svg>
                   </div>
-
-                  {/* Featured Badge */}
-                  {project.featured && (
-                    <span className="absolute top-3 left-3 px-2.5 py-0.5 bg-primary text-white text-[11px] font-bold rounded-full shadow-sm">
-                      Featured
-                    </span>
-                  )}
                 </a>
 
                 {/* Card Body */}
                 <div className="flex flex-col flex-1 p-5">
-                  {/* Category & Role */}
-                  <div className="flex items-center gap-2 mb-3">
-                    <span
-                      className="px-2.5 py-0.5 text-[11px] font-bold rounded-full"
-                      style={{ background: cat.bg, color: cat.color, border: `1px solid ${cat.border}` }}
-                    >
-                      {project.role}
-                    </span>
-                  </div>
-
                   {/* Title */}
                   <h3 className="text-lg font-bold text-slate-900 mb-2 leading-snug group-hover:text-primary transition-colors">
                     {project.title}

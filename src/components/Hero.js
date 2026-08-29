@@ -13,13 +13,6 @@ const Hero = () => {
           
           {/* Left Column: Intro */}
           <div className="lg:col-span-6 text-center lg:text-left">
-            {/* Pill */}
-            <div
-              className="inline-flex items-center px-4 py-1.5 rounded-full mb-6 text-xs sm:text-sm font-medium bg-blue-50 text-blue-700 border border-blue-200"
-            >
-              Available for Full-time &amp; Contract Roles
-            </div>
-
             <h1 className="text-4xl sm:text-5xl xl:text-6xl font-extrabold text-black mb-4 leading-tight tracking-tight">
               Hi, I'm Selamawit
             </h1>

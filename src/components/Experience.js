@@ -27,7 +27,6 @@ const Experience = () => {
       <div className="container-custom">
         <div ref={ref} className={`transition-all duration-700 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
           <div className="text-center mb-16">
-            <p className="text-primary font-medium text-xs tracking-wider uppercase mb-3 inline-block bg-blue-50 px-3 py-1 rounded-full border border-blue-100">Experience</p>
             <h2 className="section-title">Work Experience</h2>
             <div className="decoration-line mx-auto mt-4"></div>
           </div>
