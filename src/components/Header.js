@@ -37,7 +37,7 @@ const Header = () => {
   return (
     <header className={`fixed top-0 w-full z-50 transition-all duration-300 ${
       isScrolled
-        ? 'bg-[#0B0F19]/90 backdrop-blur-md border-b border-slate-800 shadow-lg shadow-black/20'
+        ? 'bg-white/95 backdrop-blur-md border-b border-slate-200 shadow-sm'
         : 'bg-transparent'
     }`}>
       <nav className="container-custom flex justify-between items-center py-4">
@@ -46,7 +46,7 @@ const Header = () => {
             <rect width="64" height="64" rx="14" fill="#2563EB" />
             <text x="32" y="43" fontFamily="Poppins, Arial, sans-serif" fontSize="28" fontWeight="700" fill="#ffffff" textAnchor="middle">ST</text>
           </svg>
-          <span className="text-lg font-bold text-white tracking-tight">
+          <span className="text-lg font-bold text-slate-900 tracking-tight">
             Selamawit
           </span>
         </a>
@@ -61,8 +61,8 @@ const Header = () => {
                 href={item.href}
                 className={`px-3.5 py-1.5 text-sm font-medium rounded-lg transition-all ${
                   isActive
-                    ? 'text-blue-400 bg-blue-500/10 font-semibold'
-                    : 'text-slate-300 hover:text-white hover:bg-slate-800/60'
+                    ? 'text-primary bg-blue-50 font-semibold'
+                    : 'text-slate-600 hover:text-slate-900 hover:bg-slate-50'
                 }`}
               >
                 {item.name}
@@ -71,7 +71,7 @@ const Header = () => {
           })}
           <a
             href="#contact"
-            className="ml-4 px-4 py-2 bg-blue-600 hover:bg-blue-500 text-white text-sm font-semibold rounded-lg shadow-md shadow-blue-500/20 transition-all hover:scale-105"
+            className="ml-4 px-4 py-2 bg-primary hover:bg-blue-700 text-white text-sm font-semibold rounded-lg shadow-sm transition-all hover:scale-105"
           >
             Contact
           </a>
@@ -79,7 +79,7 @@ const Header = () => {
 
         {/* Mobile Toggle */}
         <button
-          className="lg:hidden w-10 h-10 flex items-center justify-center rounded-lg text-slate-300 hover:text-white hover:bg-slate-800 transition-colors"
+          className="lg:hidden w-10 h-10 flex items-center justify-center rounded-lg text-slate-700 hover:text-slate-900 hover:bg-slate-100 transition-colors"
           onClick={() => setIsMenuOpen(!isMenuOpen)}
           aria-label="Toggle menu"
         >
@@ -94,7 +94,7 @@ const Header = () => {
 
         {/* Mobile Nav */}
         {isMenuOpen && (
-          <div className="lg:hidden absolute top-full left-0 w-full bg-[#0B0F19]/95 backdrop-blur-xl border-b border-slate-800 shadow-2xl">
+          <div className="lg:hidden absolute top-full left-0 w-full bg-white border-b border-slate-200 shadow-lg">
             <div className="container-custom py-4 space-y-1">
               {navItems.map((item) => {
                 const isActive = activeSection === item.href.replace('#', '');
@@ -103,7 +103,7 @@ const Header = () => {
                     key={item.name}
                     href={item.href}
                     className={`block px-4 py-2.5 rounded-lg font-medium transition-colors ${
-                      isActive ? 'text-blue-400 bg-blue-500/10' : 'text-slate-300 hover:text-white hover:bg-slate-800/60'
+                      isActive ? 'text-primary bg-blue-50' : 'text-slate-700 hover:text-slate-900 hover:bg-slate-50'
                     }`}
                     onClick={() => setIsMenuOpen(false)}
                   >
@@ -113,7 +113,7 @@ const Header = () => {
               })}
               <a
                 href="#contact"
-                className="block mt-3 px-4 py-2.5 bg-blue-600 hover:bg-blue-500 text-white text-center font-semibold rounded-lg shadow-md transition-colors"
+                className="block mt-3 px-4 py-2.5 bg-primary hover:bg-blue-700 text-white text-center font-semibold rounded-lg shadow-sm transition-colors"
                 onClick={() => setIsMenuOpen(false)}
               >
                 Contact

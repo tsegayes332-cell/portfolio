@@ -23,11 +23,11 @@ const Experience = () => {
   ];
 
   return (
-    <section id="experience" className="section-padding bg-[#0B0F19] relative border-t border-slate-800/80">
+    <section id="experience" className="section-padding bg-white border-t border-slate-200">
       <div className="container-custom">
         <div ref={ref} className={`transition-all duration-700 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
           <div className="text-center mb-16">
-            <p className="text-blue-400 font-medium text-xs tracking-wider uppercase mb-3 inline-block bg-blue-500/10 px-3 py-1 rounded-full border border-blue-500/20">Experience</p>
+            <p className="text-primary font-medium text-xs tracking-wider uppercase mb-3 inline-block bg-blue-50 px-3 py-1 rounded-full border border-blue-100">Experience</p>
             <h2 className="section-title">Work Experience</h2>
             <div className="decoration-line mx-auto mt-4"></div>
           </div>
@@ -35,35 +35,35 @@ const Experience = () => {
           <div className="max-w-3xl mx-auto">
             <div className="space-y-8">
               {experiences.map((exp, index) => (
-                <div key={index} className="bg-[#1E293B] rounded-2xl p-6 sm:p-8 border border-slate-800 hover:border-blue-500/40 transition-all card-hover shadow-xl">
+                <div key={index} className="bg-white rounded-2xl p-6 sm:p-8 border border-slate-200 shadow-sm hover:shadow-md transition-all card-hover">
                   <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between mb-4 gap-2">
                     <div>
-                      <h3 className="font-bold text-white text-lg mb-1">{exp.title}</h3>
-                      <div className="text-sm text-blue-400 font-semibold">{exp.company}</div>
+                      <h3 className="font-bold text-slate-900 text-lg mb-1">{exp.title}</h3>
+                      <div className="text-sm text-primary font-semibold">{exp.company}</div>
                     </div>
                     <div className="sm:text-right">
-                      <span className="inline-block px-3 py-1 bg-blue-500/10 text-blue-400 text-xs font-semibold rounded-full border border-blue-500/20">{exp.period}</span>
-                      <div className="text-xs text-slate-400 mt-1">{exp.location}</div>
+                      <span className="inline-block px-3 py-1 bg-blue-50 text-primary text-xs font-semibold rounded-full border border-blue-100">{exp.period}</span>
+                      <div className="text-xs text-slate-500 mt-1">{exp.location}</div>
                     </div>
                   </div>
 
-                  <p className="text-sm text-slate-300 mb-5 leading-relaxed">{exp.description}</p>
+                  <p className="text-sm text-slate-600 mb-5 leading-relaxed">{exp.description}</p>
 
                   <div className="mb-5">
-                    <h4 className="text-xs font-bold text-slate-200 uppercase tracking-wider mb-2.5">Key Achievements</h4>
+                    <h4 className="text-xs font-bold text-slate-900 uppercase tracking-wider mb-2.5">Key Achievements</h4>
                     <ul className="space-y-2">
                       {exp.achievements.map((achievement, achIndex) => (
-                        <li key={achIndex} className="flex items-start text-xs text-slate-300 leading-relaxed">
-                          <span className="w-1.5 h-1.5 bg-blue-400 rounded-full mr-2.5 mt-1.5 flex-shrink-0"></span>
+                        <li key={achIndex} className="flex items-start text-xs text-slate-600 leading-relaxed">
+                          <span className="w-1.5 h-1.5 bg-primary rounded-full mr-2.5 mt-1.5 flex-shrink-0"></span>
                           {achievement}
                         </li>
                       ))}
                     </ul>
                   </div>
 
-                  <div className="flex flex-wrap gap-2 pt-4 border-t border-slate-800">
+                  <div className="flex flex-wrap gap-2 pt-4 border-t border-slate-100">
                     {exp.technologies.map((tech, techIndex) => (
-                      <span key={techIndex} className="px-2.5 py-1 bg-[#0F172A] text-slate-300 text-xs rounded-md border border-slate-700 font-medium">
+                      <span key={techIndex} className="px-2.5 py-1 bg-slate-100 text-slate-700 text-xs rounded-md border border-slate-200 font-medium">
                         {tech}
                       </span>
                     ))}

@@ -6,7 +6,7 @@ const Hero = () => {
   return (
     <section
       id="home"
-      className="min-h-screen flex items-center relative overflow-hidden pt-28 pb-16 bg-[#0B0F19]"
+      className="min-h-screen flex items-center relative overflow-hidden pt-28 pb-16 bg-white"
     >
       <div className="container-custom w-full relative z-10">
         <div className="grid lg:grid-cols-12 gap-12 items-center">
@@ -15,24 +15,24 @@ const Hero = () => {
           <div className="lg:col-span-6 text-center lg:text-left">
             {/* Pill */}
             <div
-              className="inline-flex items-center px-4 py-1.5 rounded-full mb-6 text-xs sm:text-sm font-medium bg-[#1E293B] text-slate-300 border border-slate-700"
+              className="inline-flex items-center px-4 py-1.5 rounded-full mb-6 text-xs sm:text-sm font-medium bg-blue-50 text-blue-700 border border-blue-200"
             >
               Available for Full-time &amp; Contract Roles
             </div>
 
-            <h1 className="text-4xl sm:text-5xl xl:text-6xl font-extrabold text-white mb-4 leading-tight tracking-tight">
+            <h1 className="text-4xl sm:text-5xl xl:text-6xl font-extrabold text-black mb-4 leading-tight tracking-tight">
               Hi, I'm Selamawit
             </h1>
 
-            <h2 className="text-xl sm:text-2xl text-slate-300 font-bold mb-6 flex items-center justify-center lg:justify-start gap-2">
+            <h2 className="text-xl sm:text-2xl text-black font-bold mb-6 flex items-center justify-center lg:justify-start gap-2">
               <span>Full-Stack &amp; Mobile Developer</span>
             </h2>
 
             <div
-              className="w-16 h-1 rounded-full mx-auto lg:mx-0 mb-6 bg-blue-500"
+              className="w-16 h-1 rounded-full mx-auto lg:mx-0 mb-6 bg-primary"
             />
 
-            <p className="text-base sm:text-lg text-slate-400 mb-8 max-w-xl mx-auto lg:mx-0 leading-relaxed font-normal">
+            <p className="text-base sm:text-lg text-slate-600 mb-8 max-w-xl mx-auto lg:mx-0 leading-relaxed font-normal">
               Computer Science graduate from Haramaya University. I design and build production-ready web platforms and cross-platform mobile apps with a focus on clean architecture, performance, and real-world utility.
             </p>
 
@@ -49,7 +49,7 @@ const Hero = () => {
               ].map((tech) => (
                 <span
                   key={tech}
-                  className="px-3 py-1 text-xs font-semibold rounded-md bg-[#1E293B] text-slate-300 border border-slate-700 transition-all hover:border-slate-500"
+                  className="px-3 py-1 text-xs font-semibold rounded-md bg-slate-100 text-slate-700 border border-slate-200"
                 >
                   {tech}
                 </span>
@@ -60,7 +60,7 @@ const Hero = () => {
             <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start mb-8">
               <a
                 href="#projects"
-                className="btn-primary inline-flex items-center justify-center gap-2 text-sm font-semibold"
+                className="btn-primary inline-flex items-center justify-center gap-2 text-sm font-semibold shadow-sm"
               >
                 <span>Explore Projects</span>
                 <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -69,7 +69,7 @@ const Hero = () => {
               </a>
               <a
                 href="#contact"
-                className="btn-secondary inline-flex items-center justify-center gap-2 text-sm font-semibold"
+                className="btn-secondary inline-flex items-center justify-center gap-2 text-sm font-semibold shadow-sm"
               >
                 Contact Me
               </a>
@@ -80,7 +80,7 @@ const Hero = () => {
               <a
                 href="/resume.pdf"
                 download
-                className="inline-flex items-center gap-2 text-sm font-medium text-slate-400 hover:text-blue-400 transition-colors"
+                className="inline-flex items-center gap-2 text-sm font-medium text-slate-600 hover:text-primary transition-colors"
               >
                 <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path
@@ -99,7 +99,7 @@ const Hero = () => {
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label="GitHub Profile"
-                  className="w-9 h-9 flex items-center justify-center rounded-lg border border-slate-700 bg-[#1E293B] text-slate-300 hover:text-white hover:border-slate-500 transition-all"
+                  className="w-9 h-9 flex items-center justify-center rounded-lg border border-slate-200 bg-white text-slate-600 hover:text-primary hover:border-primary transition-all shadow-sm"
                 >
                   <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
                     <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
@@ -108,7 +108,7 @@ const Hero = () => {
                 <a
                   href="mailto:tsegayes332@gmail.com"
                   aria-label="Email Contact"
-                  className="w-9 h-9 flex items-center justify-center rounded-lg border border-slate-700 bg-[#1E293B] text-slate-300 hover:text-white hover:border-slate-500 transition-all"
+                  className="w-9 h-9 flex items-center justify-center rounded-lg border border-slate-200 bg-white text-slate-600 hover:text-primary hover:border-primary transition-all shadow-sm"
                 >
                   <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path
@@ -127,7 +127,7 @@ const Hero = () => {
           <div className="lg:col-span-6 relative mt-6 lg:mt-0">
             {/* Code Editor Container */}
             <div
-              className="relative rounded-2xl overflow-hidden border border-slate-700 bg-[#0F172A]"
+              className="relative rounded-2xl overflow-hidden border border-slate-800 bg-[#0F172A] shadow-xl"
             >
               {/* Window Titlebar */}
               <div
@@ -279,22 +279,22 @@ const Hero = () => {
 
             {/* Metric Badges */}
             <div
-              className="hidden sm:flex items-center gap-3 absolute -bottom-5 -left-4 bg-[#1E293B] rounded-xl p-3.5 border border-slate-700 shadow-md"
+              className="hidden sm:flex items-center gap-3 absolute -bottom-5 -left-4 bg-white rounded-xl p-3.5 border border-slate-200 shadow-md"
             >
-              <div className="w-9 h-9 rounded-lg bg-blue-500/10 text-blue-400 flex items-center justify-center font-bold text-base border border-blue-500/20">
+              <div className="w-9 h-9 rounded-lg bg-blue-50 text-blue-600 flex items-center justify-center font-bold text-base border border-blue-100">
                 🚀
               </div>
               <div>
-                <div className="text-xs font-bold text-white">5+ Full-Stack Apps</div>
-                <div className="text-[11px] text-slate-400">Shipped &amp; Tested</div>
+                <div className="text-xs font-bold text-slate-900">5+ Full-Stack Apps</div>
+                <div className="text-[11px] text-slate-500">Shipped &amp; Tested</div>
               </div>
             </div>
 
             <div
-              className="hidden sm:flex items-center gap-2 absolute -top-4 -right-3 bg-[#1E293B] rounded-xl px-3.5 py-2 border border-slate-700 shadow-md"
+              className="hidden sm:flex items-center gap-2 absolute -top-4 -right-3 bg-white rounded-xl px-3.5 py-2 border border-slate-200 shadow-md"
             >
-              <span className="w-2 h-2 rounded-full bg-emerald-400" />
-              <span className="text-xs font-semibold text-slate-200">Open to Work</span>
+              <span className="w-2 h-2 rounded-full bg-emerald-500" />
+              <span className="text-xs font-semibold text-slate-800">Open to Work</span>
             </div>
           </div>
 
@@ -305,7 +305,7 @@ const Hero = () => {
       <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2">
         <a
           href="#about"
-          className="text-slate-500 hover:text-blue-400 transition-colors p-2 inline-block"
+          className="text-slate-400 hover:text-primary transition-colors p-2 inline-block"
           aria-label="Scroll to About section"
         >
           <svg className="w-5 h-5 animate-bounce" fill="none" stroke="currentColor" viewBox="0 0 24 24">
