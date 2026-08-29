@@ -42,47 +42,26 @@ const Hero = () => {
           <div className="lg:col-span-6 text-center lg:text-left">
             {/* Availability Pill */}
             <div
-              className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full mb-6 text-xs sm:text-sm font-medium"
+              className="inline-flex items-center px-4 py-1.5 rounded-full mb-6 text-xs sm:text-sm font-medium"
               style={{
                 background: 'rgba(37,99,235,0.08)',
                 color: '#2563EB',
                 border: '1px solid rgba(37,99,235,0.2)',
               }}
             >
-              <span
-                style={{
-                  width: '8px',
-                  height: '8px',
-                  borderRadius: '50%',
-                  background: '#22c55e',
-                  display: 'inline-block',
-                  boxShadow: '0 0 8px #22c55e',
-                }}
-              />
               Available for Full-time &amp; Contract Roles
             </div>
 
-            <h1 className="text-4xl sm:text-5xl xl:text-6xl font-extrabold text-slate-900 mb-4 leading-tight tracking-tight">
-              Hi, I'm{' '}
-              <span
-                style={{
-                  background: 'linear-gradient(135deg, #2563EB 0%, #4f46e5 50%, #7c3aed 100%)',
-                  WebkitBackgroundClip: 'text',
-                  WebkitTextFillColor: 'transparent',
-                  backgroundClip: 'text',
-                }}
-              >
-                Selamawit
-              </span>
+            <h1 className="text-4xl sm:text-5xl xl:text-6xl font-extrabold text-black mb-4 leading-tight tracking-tight">
+              Hi, I'm Selamawit
             </h1>
 
-            <h2 className="text-xl sm:text-2xl text-slate-700 font-semibold mb-6 flex items-center justify-center lg:justify-start gap-2">
+            <h2 className="text-xl sm:text-2xl text-black font-bold mb-6 flex items-center justify-center lg:justify-start gap-2">
               <span>Full-Stack &amp; Mobile Developer</span>
             </h2>
 
             <div
-              className="w-16 h-1 rounded-full mx-auto lg:mx-0 mb-6"
-              style={{ background: 'linear-gradient(90deg, #2563EB, #7c3aed)' }}
+              className="w-16 h-1 rounded-full mx-auto lg:mx-0 mb-6 bg-primary"
             />
 
             <p className="text-base sm:text-lg text-slate-600 mb-8 max-w-xl mx-auto lg:mx-0 leading-relaxed font-normal">
