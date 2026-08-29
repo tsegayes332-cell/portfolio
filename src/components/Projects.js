@@ -179,7 +179,7 @@ const Projects = () => {
 
                   {/* Featured Badge */}
                   {project.featured && (
-                    <span className="absolute top-3 left-3 px-2.5 py-0.5 bg-blue-600/90 backdrop-blur-md text-white text-[11px] font-bold rounded-full shadow-md border border-blue-400/30">
+                    <span className="absolute top-3 left-3 px-2.5 py-0.5 bg-blue-600 text-white text-[11px] font-bold rounded-full border border-blue-500">
                       Featured
                     </span>
                   )}
@@ -249,7 +249,7 @@ const Projects = () => {
                         href={project.demo}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="flex items-center gap-1.5 text-xs font-semibold px-3 py-1.5 rounded-lg bg-blue-600 hover:bg-blue-500 text-white shadow-md shadow-blue-600/30 transition-all hover:scale-105"
+                        className="flex items-center gap-1.5 text-xs font-semibold px-3 py-1.5 rounded-lg bg-blue-600 hover:bg-blue-500 text-white transition-all hover:scale-105"
                       >
                         <span>Live Demo</span>
                         <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
