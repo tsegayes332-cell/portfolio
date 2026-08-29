@@ -15,7 +15,7 @@ const About = () => {
 
           <div className="max-w-4xl mx-auto text-center">
             <h3 className="text-2xl md:text-3xl font-bold text-slate-900 mb-6">
-              I Build Things That <span className="text-primary">Actually Work</span>
+              I Build Things That Actually Work
             </h3>
 
             <div className="space-y-4 text-slate-600 leading-relaxed text-base mb-12 max-w-2xl mx-auto">

@@ -102,12 +102,6 @@ const Projects = () => {
     { name: 'Mobile', value: 'mobile' },
   ];
 
-  const categoryColors = {
-    fullstack: { color: '#2563EB', bg: 'rgba(37,99,235,0.08)', border: 'rgba(37,99,235,0.2)' },
-    frontend:  { color: '#7C3AED', bg: 'rgba(124,58,237,0.08)', border: 'rgba(124,58,237,0.2)' },
-    mobile:    { color: '#059669', bg: 'rgba(5,150,105,0.08)', border: 'rgba(5,150,105,0.2)' },
-  };
-
   const filteredProjects = activeFilter === 'all'
     ? projects
     : projects.filter(project => project.category === activeFilter);
