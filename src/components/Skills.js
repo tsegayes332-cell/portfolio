@@ -54,11 +54,7 @@ const Skills = () => {
               className="bg-white rounded-2xl p-6 border card-hover"
               style={{ borderColor: group.border }}>
               {/* Header */}
-              <div className="flex items-center gap-3 mb-5 pb-4" style={{ borderBottom: `1px solid ${group.border}` }}>
-                <div className="w-10 h-10 rounded-xl flex items-center justify-center text-xl"
-                  style={{ background: group.bg }}>
-                  {group.icon}
-                </div>
+              <div className="mb-4 pb-3" style={{ borderBottom: `1px solid ${group.border}` }}>
                 <h3 className="text-base font-bold text-text-primary">{group.category}</h3>
               </div>
 
